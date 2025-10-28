@@ -92,7 +92,7 @@
     font-weight: 900;
     background-color: #00216f;
     color: #fff;
-    border: none;
+    border: #00216f solid 2px;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -102,7 +102,6 @@
   .contact-btn:hover {
     background-color: #ffffff;
     color: #00216f;
-    border: #00216f solid 2px;
   }
 
   .normal-btn-header {
@@ -111,7 +110,7 @@
 </style>
 <header>
   <div class="logo">
-    <img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" />
+    <a href="home.html"><img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" /></a>
   </div>
   <nav>
     <ul class="menu">
@@ -126,13 +125,13 @@
       <li class="dropdown">
         <a href="#">Products</a>
         <ul class="submenu">
-          <li><a href="#">HPC platforms</a></li>
-          <li><a href="#">Networking device</a></li>
-          <li><a href="#">Cyber security</a></li>
+          <li><a href="hpc.html">HPC platforms</a></li>
+          <li><a href="networking_device.html">Networking device</a></li>
+          <li><a href="cyber_security.html">Cyber security</a></li>
           <li><a href="#">Crypto Graphy</a></li>
         </ul>
       </li>
-      <li><a class="normal-btn-header" href="#">About Us</a></li>
+      <li><a class="normal-btn-header" href="about.html">About Us</a></li>
       <button class="contact-btn">Contact Us</button>
     </ul>
   </nav>
