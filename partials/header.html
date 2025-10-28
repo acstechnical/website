@@ -1,0 +1,139 @@
+<style>
+  header {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 1000;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 1% 4%;
+  }
+
+  /* Logo */
+  header .logo {
+    user-select: none;
+  }
+
+  header .logo img {
+    height: 40px;
+    object-fit: contain;
+  }
+
+  /* Menu chính */
+  header nav .menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  header nav .menu > li {
+    position: relative;
+    margin-right: 20px;
+  }
+
+  header nav .menu > li > a {
+    text-decoration: none;
+    color: #00216f;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 10px 5px 0 0;
+  }
+
+  header nav .menu > li:hover > a {
+    color: #ffffff;
+    background-color: #00216f;
+    transition: 200ms linear, color 200ms linear, border 200ms linear;
+  }
+
+  /* Submenu */
+  header nav .submenu {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #00216f;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #00216f !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    z-index: 999;
+  }
+
+  header nav .submenu li a {
+    background: #ffffff;
+    color: #00216f;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: block;
+  }
+
+  header nav .submenu li a:hover {
+    color: #ffffff;
+    background-color: #00216f;
+  }
+
+  /* Hover vào .dropdown thì hiện submenu */
+  header nav .dropdown:hover .submenu {
+    display: flex;
+  }
+
+  .contact-btn {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 900;
+    background-color: #00216f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    background-color: #ffffff;
+    color: #00216f;
+    border: #00216f solid 2px;
+  }
+
+  .normal-btn-header {
+    border-radius: 5px !important;
+  }
+</style>
+<header>
+  <div class="logo">
+    <img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" />
+  </div>
+  <nav>
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Solutions</a>
+        <ul class="submenu">
+          <li><a href="#">AntiDDoS</a></li>
+          <li><a href="#">IpSec</a></li>
+          <li><a href="#">IPS/IDS</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Products</a>
+        <ul class="submenu">
+          <li><a href="#">HPC platforms</a></li>
+          <li><a href="#">Networking device</a></li>
+          <li><a href="#">Cyber security</a></li>
+          <li><a href="#">Crypto Graphy</a></li>
+        </ul>
+      </li>
+      <li><a class="normal-btn-header" href="#">About Us</a></li>
+      <button class="contact-btn">Contact Us</button>
+    </ul>
+  </nav>
+</header>
