@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
+    <title>Acronics Solutions</title>
     <meta http-equiv="refresh" content="0; url=pages/home.html" />
-    <title>Redirecting...</title>
-    <link rel="preload" as="video" href="assets\static\antiddos\background.mp4" type="video/mp4" />
-    <link rel="preload" as="video" href="assets\static\global\footer_background.mp4" type="video/mp4" />
-    <link rel="preload" as="video" href="assets\static\home\home_background.mp4" type="video/mp4" />
-    <link rel="preload" as="video" href="assets\static\hpc\cpu_background.mp4" type="video/mp4" />
+    <link rel="preload" as="video" href="assets/static/antiddos/background.mp4" type="video/mp4">
   </head>
+  
   <body>
     <p>
-      If you are not redirected,
-      <a href="pages/home.html">click here</a>
-      .
+      Nếu bạn chưa được chuyển hướng tự động,
+      <a href="pages/home.html">nhấn vào đây</a>.
     </p>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/assets/js/service-worker.js', {
+          scope: '/'
+        })
+        .then(() => console.log("Service Worker registered ✅"))
+        .catch(err => console.error("SW registration failed ❌: ", err));
+      }
+    </script>
   </body>
 </html>
