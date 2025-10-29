@@ -14,3 +14,43 @@
   max-height: 100vh;
   object-fit: cover; /* giúp video không bị méo */
 }
+
+.carousel {
+  margin: 2% 0%;
+  width: auto;
+  display: flex;
+  border: rgb(0, 0, 0) 12px solid;
+  overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group_device {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding-right: 1em;
+  animation: spin 20s linear infinite;
+}
+
+.device {
+  flex: 0 0 500px;
+  height: 250px;
+  padding: 1em;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.2em;
+  text-align: center;
+  align-content: center;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
