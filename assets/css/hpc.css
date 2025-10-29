@@ -5,7 +5,6 @@
   height: 90vh;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
-  padding: 80px 0;
 }
 .overview video {
   width: 100%;
@@ -38,12 +37,11 @@
   gap: 20px;
   border: black 15px solid;
 }
+
 .card {
   user-select: none;
   height: 170px;
-  width: 30%;
-  max-width: 400px;
-  min-width: 250px;
+  width: 20vw;
   padding: 20px;
   text-align: center;
   background-color: black;
