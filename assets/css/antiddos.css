@@ -169,3 +169,17 @@
   color: #e0e0e0;
   max-width: 300px;
 }
+
+.staticstic_container {
+  background-color: #03011d;
+  width: 100%;
+  height: fit-content;
+  margin-top: 5vh;
+  user-select: none;
+}
+
+.staticstic {
+  margin: 3vh 20vw;
+  width: 60vw;
+  border-radius: 20px;
+}
