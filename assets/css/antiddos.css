@@ -1,40 +1,29 @@
+/* OVERVIEW SECTION */
 .overview {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
   user-select: none;
 }
 
-/* VIDEO NỀN */
+/* VIDEO BACKGROUND */
 .video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* nằm dưới các phần tử khác */
+  z-index: 1;
 }
 
 .video-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* video đầy toàn khung mà không méo */
+  object-fit: cover;
 }
 
-/* ẢNH ĐÈ LÊN VIDEO */
-.overview-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(20%, -50%);
-  z-index: 10;
-  width: 35vw;
-  height: auto;
-  filter: drop-shadow(10px 25px 25px rgba(0, 0, 0, 1));
-}
-
-/* TEXT ĐÈ LÊN VIDEO */
+/* OVERVIEW TEXT */
 .overview-text {
   font-family: "Ubuntu", sans-serif;
   font-weight: 900;
@@ -43,8 +32,122 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-110%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 10;
-  width: 35vw;
+  width: 60vw;
+  text-align: center;
   filter: drop-shadow(10px 25px 25px rgba(0, 0, 0, 1));
+}
+
+/* CONTENT SECTION */
+.explain {
+  display: flex;
+  margin: 5vh auto;
+  width: 70vw;
+  letter-spacing: 1px;
+  align-items: center;
+  gap: 3vw;
+}
+
+.explain_text {
+  width: 40%;
+}
+
+.explain_text p {
+  font-size: 17px;
+  text-align: justify;
+  margin-bottom: 2vh;
+}
+
+.explain_text h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 1000;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.explain_img {
+  width: 60%;
+  object-fit: contain;
+}
+
+/* SOLUTION SECTION */
+.solution {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 5vh;
+  background-image: url("../static/antiddos/solution_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh 5vw;
+  user-select: none;
+}
+
+.solution_img {
+  width: 25%;
+  margin-right: 3vw;
+}
+
+.solution_desc {
+  width: 100%;
+  max-width: 1300px;
+  text-align: center;
+}
+
+.solution_desc h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 1000;
+  font-size: 30px;
+  margin-bottom: 5vh;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.solution_desc_content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+/* EACH BENEFIT CARD */
+.solution_benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 22%;
+  min-width: 200px;
+}
+
+.solution_benefit img {
+  height: 100px;
+  width: 100px;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin-bottom: 2vh;
+  object-fit: cover;
+}
+
+.solution_benefit h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 1vh;
+}
+
+.solution_benefit p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  max-width: 300px;
 }

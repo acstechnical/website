@@ -2,24 +2,22 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Acronics Solutions</title>
     <meta http-equiv="refresh" content="0; url=pages/home.html" />
-    <link rel="preload" as="video" href="assets/static/antiddos/background.mp4" type="video/mp4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acronics Solutions</title>
+
+    <!-- Tối ưu trải nghiệm ban đầu -->
+    <link rel="icon" href="assets/static/global/acronics_logo_browser_tab.png" type="image/png" />
+
+    <!-- Preload video đầu tiên để giảm giật khi redirect -->
+    <link rel="preload" as="video" href="assets/static/home/home_background.mp4" type="video/mp4">
   </head>
-  
+
   <body>
-    <p>
-      Nếu bạn chưa được chuyển hướng tự động,
-      <a href="pages/home.html">nhấn vào đây</a>.
-    </p>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/assets/js/service-worker.js', {
-          scope: '/'
-        })
-        .then(() => console.log("Service Worker registered ✅"))
-        .catch(err => console.error("SW registration failed ❌: ", err));
-      }
-    </script>
+    <noscript>
+      <p>Nếu bạn chưa được chuyển hướng tự động, 
+        <a href="pages/home.html">nhấn vào đây</a>.
+      </p>
+    </noscript>
   </body>
 </html>

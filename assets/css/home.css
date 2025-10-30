@@ -18,12 +18,13 @@
   margin: 2vh 0;
   width: auto;
   display: flex;
+  overflow: hidden !important;
   overflow-x: auto;
   user-select: none;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 
 .group_device {
@@ -40,7 +41,7 @@
   flex: 0 0 500px;
   height: 20vh;
   padding: 1em;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   border-radius: 0.2em;
   text-align: center;
   align-content: center;
