@@ -70,6 +70,14 @@
 .explain_img {
   width: 60%;
   object-fit: contain;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: zoom-in;
+}
+
+.explain_img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 /* SOLUTION SECTION */
@@ -77,6 +85,7 @@
   position: relative;
   width: 100%;
   min-height: 500px;
+  height: fit-content;
   margin-top: 5vh;
   background-image: url("../static/antiddos/solution_background.png");
   background-size: cover;
@@ -85,7 +94,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3vh 5vw;
   user-select: none;
 }
 
@@ -96,7 +104,6 @@
 
 .solution_desc {
   width: 100%;
-  max-width: 1300px;
   text-align: center;
 }
 
@@ -120,13 +127,24 @@
 
 /* EACH BENEFIT CARD */
 .solution_benefit {
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  align-content: center;
   color: white;
-  width: 22%;
-  min-width: 200px;
+  width: 18vw;
+  height: 18vw;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.solution_benefit:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.6); /* làm tối nền */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .solution_benefit img {
