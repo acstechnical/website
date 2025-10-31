@@ -11,7 +11,7 @@
   <body>
     <div id="header"></div>
     <section class="video-container">
-      <video autoplay muted loop>
+      <video autoplay muted loop preload="auto">
         <source src="../assets/static/home/home_background.mp4" type="video/mp4" />
         Trình duyệt của bạn không hỗ trợ video.
       </video>
@@ -41,11 +41,7 @@
         </div>
       </div>
     </div>
-    <div class="carousel" style="
-      --width: 350px;
-      --height: 200px;
-      --quantity: 5;
-    ">
+    <div class="carousel" style="--width: 350px; --height: 200px; --quantity: 5">
       <div class="group_device">
         <div class="device" style="--position: 1"><img src="..\assets\static\home\hpc_sample_01.png" alt="" /></div>
         <div class="device" style="--position: 2"><img src="..\assets\static\home\ipsec_sample_01.png" alt="" /></div>
