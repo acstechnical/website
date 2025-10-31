@@ -1,0 +1,127 @@
+.overview {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+.overview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Chữ ở giữa ảnh */
+.overview .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  user-select: none;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  display: flex;
+  gap: 2vw;
+  font-family: "Ubuntu", sans-serif;
+  margin: 2vh;
+}
+
+.intro img {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 20px;
+}
+
+.intro_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.intro_text h1 {
+  font-size: 40px;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.intro_text p {
+  line-height: 1.5em;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: justify;
+  padding: 0 5vw;
+}
+
+.staticstic {
+  width: 100%;
+  height: 16vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../static/antiddos/solution_background.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8vw;
+  user-select: none;
+}
+
+.staticstic_card {
+  font-family: "Ubuntu", sans-serif;
+  color: seashell;
+  background: rgba(0, 0, 0, 0.6);
+  border: rgba(224, 224, 224, 1) 10px solid;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.feature_box {
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 5vw;
+  gap: 2vh;
+}
+
+.feature_row {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.feature_desc {
+  width: 45%;
+  height: fit-content;
+  min-height: 5vw;
+  padding: 20px;
+  background-color: rgb(1, 0, 28);
+  color: white;
+  border-radius: 30px;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5em;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-justify: center;
+  user-select: none;
+}
