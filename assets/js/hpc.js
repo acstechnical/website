@@ -26,3 +26,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function applyTranslations(data) {
+  document.querySelectorAll("[data-translate]").forEach((el) => {
+    const key = el.getAttribute("data-translate");
+    if (data && data[key]) {
+      try {
+        // Thử innerHTML trước (parse tag)
+        el.innerHTML = data[key];
+        // Nếu vẫn lỗi (hiếm), fallback plain text bằng cách strip tags
+        if (el.innerHTML.includes("<em>") && !el.querySelector("em")) {
+          // Check nếu tag không render
+          el.innerHTML = data[key].replace(/<em>(.*?)<\/em>/g, "$1"); // Strip <em>
+        }
+      } catch (e) {
+        el.textContent = data[key]; // Fallback textContent nếu innerHTML fail
+      }
+    }
+  });
+}

@@ -40,23 +40,24 @@
 
 .card {
   user-select: none;
-  height: 170px;
+  height: 200px;
   width: 20vw;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   background-color: black;
   color: #ffffff; /* Neon blue text cho vẻ cyber */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 191, 255, 0.1); /* Shadow ngoài + inner glow neon blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 191, 255, 0.1); /* Shadow ngoài + inner glow neon blue */
   border-radius: 10px; /* Border radius mượt hơn */
   font-family: "Montserrat", sans-serif;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 700; /* Bold hơn cho impact */
   border: 1px solid rgba(0, 191, 255, 0.3); /* Neon blue border */
   transition: all 0.4s ease; /* Smooth transition */
   cursor: pointer;
   text-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Text glow neon blue */
   animation: fadeInUp 1s ease-out forwards; /* Fade in animation như overlay-text */
-  opacity: 0; /* Để animation chạy */
+  opacity: 0;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -79,7 +80,8 @@
 } /* Stagger animation cho từng card */
 .card:hover {
   transform: scale(1.05) translateY(-5px); /* Scale + lift up cho tech feel */
-  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4), 0 0 30px rgba(0, 191, 255, 0.2); /* Intense neon blue glow */
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4),
+    0 0 30px rgba(0, 191, 255, 0.2); /* Intense neon blue glow */
   text-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 @keyframes fadeInUp {
@@ -126,7 +128,8 @@
 }
 .card.selected {
   transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4), 0 0 30px rgba(0, 191, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4),
+    0 0 30px rgba(0, 191, 255, 0.2);
   text-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
 }
 
