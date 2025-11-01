@@ -1,148 +1,105 @@
 .overview {
-  background-color: #000;
+  background-color: black;
   position: relative;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
 }
-
 .overview video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8); /* Làm tối video để text nổi bật hơn */
 }
-
+/* Chữ ở giữa ảnh */
 .overview .overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: clamp(2rem, 5vw, 4rem); /* Responsive font size */
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
   user-select: none;
-  z-index: 2;
-  animation: fadeInUp 1s ease-out; /* Thêm animation mượt */
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -30%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* Main content */
 .main_content {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
 }
 
-/* Intro section */
 .intro {
   display: flex;
-  flex-wrap: wrap; /* Responsive cho mobile */
-  gap: 4rem;
-  align-items: center;
-  margin: 2rem 0;
-  padding: 0 4rem;
+  gap: 2vw;
+  font-family: "Ubuntu", sans-serif;
+  margin: 2vh;
 }
 
 .intro img {
-  width: min(25vw, 300px); /* Giới hạn max width */
-  height: auto; /* Giữ aspect ratio thay vì square */
+  width: 25vw;
+  height: 25vw;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease; /* Hover effect */
-}
-
-.intro img:hover {
-  transform: scale(1.05);
 }
 
 .intro_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: justify;
-  gap: 1rem;
-  flex: 1;
-  min-width: 300px;
+  align-items: justify;
+  gap: 2vh;
+  padding: 0 5vw;
 }
 
 .intro_text h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 900;
-  text-align: left;
-  color: #000;
-  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: justify;
 }
 
 .intro_text p {
-  font-size: 1.1rem;
+  line-height: 1.5em;
+  font-size: 20px;
   font-weight: 400;
   text-align: justify;
-  padding: 0;
-  line-height: 1.7;
 }
 
-/* Statistics section */
 .staticstic {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../static/antiddos/solution_background.png") center/cover no-repeat;
+  height: 16vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../static/antiddos/solution_background.png");
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  gap: 8vw;
   user-select: none;
 }
 
 .staticstic_card {
   font-family: "Ubuntu", sans-serif;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.7);
-  border: 3px solid #e0e0e0;
+  color: seashell;
+  background: rgba(0, 0, 0, 0.6);
+  border: rgba(224, 224, 224, 1) 10px solid;
   width: 13vw;
   height: 13vw;
-  border-radius: 50%;
+  border-radius: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(10px); /* Hiệu ứng glassmorphism */
 }
 
 .staticstic_card:hover {
   transform: scale(1.1);
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
-}
-
-.staticstic_card h1 {
-  font-size: clamp(2rem, 1vw, 2rem);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.staticstic_card h3 {
-  font-size: 0.9rem;
-  font-weight: 400;
-  opacity: 0.9;
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.6);
 }
 
 /* Feature box */
@@ -156,16 +113,16 @@
 
 .feature_row {
   display: flex;
-  flex-wrap: wrap; /* Responsive */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
 
 .feature_desc {
   flex: 1;
-  min-width: 300px; /* Min width cho mobile */
+  min-width: 300px;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #01001c, #020033); /* Gradient đẹp hơn */
+  background: linear-gradient(135deg, #01001c, #020033);
   color: #fff;
   border-radius: 20px;
   font-family: "Ubuntu", sans-serif;
@@ -186,72 +143,8 @@
   display: block;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #ffd700; /* Màu vàng cho strong để nổi bật */
+  color: #ffd700;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .main_content {
-    padding: 1rem;
-  }
-
-  .intro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .intro_text {
-    align-items: center;
-    text-align: center;
-  }
-
-  .intro_text h1 {
-    text-align: center;
-  }
-
-  .staticstic {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .staticstic_card {
-    width: 150px;
-    height: 150px;
-  }
-
-  .feature_row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature_desc {
-    width: 100%;
-    min-width: auto;
-  }
-
-  .overview .overlay-text {
-    font-size: 2rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .overview {
-    height: 70vh;
-  }
-
-  .staticstic_card h1 {
-    font-size: 1.5rem;
-  }
-
-  .feature_desc {
-    padding: 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* Smooth scrolling và transitions chung */
 html {
   scroll-behavior: smooth;
 }
@@ -259,4 +152,15 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }

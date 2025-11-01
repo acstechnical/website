@@ -1,15 +1,16 @@
 .video-container {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #000;
+  overflow: hidden;
 }
 
 .video-container video {
   width: 100%;
-  max-height: 100vh;
+  max-height: 95vh;
   object-fit: cover; /* giúp video không bị méo */
 }
 
@@ -18,14 +19,23 @@
   height: var(--height);
   user-select: none;
   overflow-x: hidden;
+  margin: 2vh 0;
 }
+
 .carousel .group_device {
   display: flex;
   width: 100%;
   min-width: calc(var(--width) * var(--quantity));
   position: relative;
 }
+
 .carousel .group_device .device {
+  border-radius: 30px;
+  background-color: black;
+  padding: 1vh 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: var(--width);
   height: var(--height);
   position: absolute;
@@ -33,6 +43,7 @@
   animation: spin 10s linear infinite;
   animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
 }
+
 .device img {
   width: 90%;
   height: 90%;
@@ -45,21 +56,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
   background-color: #ffffff;
   width: auto;
   height: auto;
-  padding: 4em 0;
   gap: 20px;
 }
 
+.introduce_container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  background-color: #ffffff;
+}
+
 .introduce {
+  background-color: rgb(255, 255, 255);
   width: 85vw;
-  height: max-content;
+  height: fit-content;
   text-align: center;
   padding: 1em 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1em;
+  padding: 2vw;
 }
 
 .introduce h1 {
@@ -147,29 +170,25 @@
   word-break: break-word;
 }
 
+.product_intro {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  height: 10vh;
+  display: flex;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  color: #ffffff;
+  font-size: 2.5em;
+}
+
 @keyframes spin {
   from {
     left: 100%;
   }
   to {
     left: calc(var(--width) * -1);
-  }
-}
-
-@media (max-width: 768px) {
-  .content_box_container {
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .content_box {
-    width: 45%;
-    min-width: 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .content_box {
-    width: 100%;
   }
 }
