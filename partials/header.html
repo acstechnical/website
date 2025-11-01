@@ -33,7 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 2vw;
     list-style: none;
   }
   header nav .menu > li {
@@ -44,7 +44,7 @@
     color: #00216f;
     padding: 10px;
     display: block;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
   }
   header nav .menu > li:hover > a {
     color: #fafafa;
@@ -53,6 +53,7 @@
   }
   /* Submenu */
   header nav .submenu {
+    width: 150px;
     font-size: 12px;
     display: none;
     position: absolute;
@@ -67,11 +68,14 @@
     flex-direction: column;
   }
   header nav .submenu li a {
+    width: 100%;
+    height: 40px;
     background: #fafafa;
     color: #00216f;
     text-decoration: none;
     padding: 10px 15px;
-    display: block;
+    display: flex;
+    text-align: center;
   }
   header nav .submenu li a:hover {
     color: #fafafa;
@@ -80,6 +84,8 @@
   /* Hover vào .dropdown thì hiện submenu */
   header nav .dropdown:hover .submenu {
     display: flex;
+    border-radius: 0 10px 10px 10px;
+    overflow: hidden;
   }
   .contact-btn {
     font-family: "Ubuntu", sans-serif;
@@ -120,14 +126,18 @@
     background-color: #00216f;
     color: #ffffff;
   }
+  .dropdown a {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 </style>
 <header>
   <div class="logo">
     <a href="home.html">
-      <img
-        src="../assets/static/global/acs_logo.png"
-        alt="Acronics Solutions"
-      />
+      <img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" />
     </a>
   </div>
   <nav>
@@ -147,26 +157,18 @@
         <ul class="submenu">
           <li><a href="hpc.html" data-translate="hpc">HPC platforms</a></li>
           <li>
-            <a href="networking_device.html" data-translate="networking"
-              >Networking device</a
-            >
+            <a href="networking_device.html" data-translate="networking">Networking device</a>
           </li>
           <li>
-            <a href="cyber_security.html" data-translate="cyber"
-              >Cyber security</a
-            >
+            <a href="cyber_security.html" data-translate="cyber">Cyber security</a>
           </li>
           <li>
-            <a href="crypto_graphy.html" data-translate="cryptography"
-              >Crypto Graphy</a
-            >
+            <a href="crypto_graphy.html" data-translate="cryptography">Crypto Graphy</a>
           </li>
         </ul>
       </li>
       <li>
-        <a class="normal-btn-header" href="about.html" data-translate="about"
-          >About Us</a
-        >
+        <a class="normal-btn-header" href="about.html" data-translate="about">About Us</a>
       </li>
       <button class="contact-btn" data-translate="contact">Contact Us</button>
       <li>
