@@ -44,7 +44,6 @@
   display: flex;
   margin: 5vh auto;
   width: 70vw;
-  letter-spacing: 1px;
   align-items: center;
   gap: 3vw;
 }
@@ -52,16 +51,22 @@
 .explain_text {
   width: 40%;
 }
+.explain_text h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
 
-.explain_text p {
-  font-size: 17px;
+.explain_text span {
+  font-size: 18px;
+  display: inline-block;
   text-align: justify;
-  margin-bottom: 2vh;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .explain_text h3 {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 1000;
+  font-weight: 900;
   font-size: 40px;
   text-align: center;
   margin-bottom: 5vh;
@@ -136,7 +141,8 @@
   color: white;
   width: 18vw;
   height: 18vw;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease,
+    background-color 0.4s ease;
   cursor: pointer;
   border-radius: 100%;
 }
