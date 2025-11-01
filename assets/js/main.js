@@ -44,3 +44,32 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load footer (nếu có CSS/script)
   loadPartial("../partials/footer.html", "footer");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".carousel");
+  const devices = document.querySelectorAll(".device");
+  const totalDurationMs = 10 * 1000; // 10s
+  const quantity = parseInt(carousel.style.getPropertyValue("--quantity"));
+  const totalSeconds = totalDurationMs / 1000;
+
+  let startTime = localStorage.getItem("carouselStartTime");
+  if (!startTime) {
+    startTime = Date.now().toString();
+  }
+  const currentTime = Date.now();
+  const elapsedMs = currentTime - parseInt(startTime);
+  let offsetSeconds = (elapsedMs / 1000) % totalSeconds;
+  if (offsetSeconds < 0) offsetSeconds += totalSeconds;
+
+  devices.forEach((device) => {
+    const position = parseInt(device.style.getPropertyValue("--position"));
+    const origDelaySec = (totalSeconds / quantity) * (position - 1);
+    let localElapsedSec = (offsetSeconds - origDelaySec + totalSeconds) % totalSeconds;
+    const newDelaySec = -localElapsedSec;
+    device.style.animationDelay = newDelaySec + "s";
+  });
+
+  localStorage.setItem("carouselStartTime", currentTime.toString());
+
+  setTimeout(() => localStorage.removeItem("carouselStartTime"), 24 * 60 * 60 * 1000);
+});

@@ -3,6 +3,8 @@
   "our_solutions": "Giải pháp của chúng tôi",
   "our_products": "Sản phẩm của chúng tôi",
   "products": "Sản phẩm",
+  "company": "Công ty",
+  "carreers": "Cơ hội nghề nghiệp",
   "about": "Về chúng tôi",
   "contact": "Liên hệ",
   "antiddos": "Chống DDoS",
@@ -13,5 +15,7 @@
   "cyber": "An ninh mạng",
   "cryptography": "Mật mã học",
   "what_we_do": "CHÚNG TÔI LÀM GÌ ?",
-  "what_we_do_desc": "cung cấp các sản phẩm tính toán doanh nghiệp, mạng, lưu trữ và bộ tăng tốc xử lý cảm biến với công nghệ FPGA Achronix, Intel và Xilinx. Những sản phẩm lập trình này tăng đáng kể hiệu suất ứng dụng và hiệu quả năng lượng trong khi giảm tổng chi phí sở hữu."
+  "what_we_do_desc": "cung cấp các sản phẩm tính toán doanh nghiệp, mạng, lưu trữ và bộ tăng tốc xử lý cảm biến với công nghệ FPGA Achronix, Intel và Xilinx. Những sản phẩm lập trình này tăng đáng kể hiệu suất ứng dụng và hiệu quả năng lượng trong khi giảm tổng chi phí sở hữu.",
+  "footer-title":"Đổi mới các giải pháp an ninh mạng, mạng và hiệu suất."
+
 }
