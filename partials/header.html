@@ -3,7 +3,7 @@
     font-family: "Ubuntu", sans-serif;
     font-weight: 600;
     height: auto;
-    background-color: rgba(255, 255, 255, 1); /* Bắt đầu semi-transparent */
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,13 +12,13 @@
     position: fixed;
     width: 100%;
     padding: 1.5% 4%;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000; /* Đảm bảo navbar ở trên cùng */
   }
 
   header.scrolled {
-    background-color: rgba(255, 255, 255, 0.8); /* Đầy opaque khi scroll */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Tăng shadow cho nổi bật */
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   /* Logo */
   header .logo {
@@ -56,6 +56,7 @@
     width: 150px;
     font-size: 12px;
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
@@ -65,17 +66,13 @@
     border-radius: 0 0 10px 10px;
     border: 1px solid #00216f !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    flex-direction: column;
   }
   header nav .submenu li a {
     width: 100%;
-    height: 40px;
     background: #fafafa;
     color: #00216f;
     text-decoration: none;
     padding: 10px 15px;
-    display: flex;
-    text-align: center;
   }
   header nav .submenu li a:hover {
     color: #fafafa;
@@ -97,7 +94,6 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-right: 15px;
   }
   .contact-btn:hover {
     background-color: #ffffff;
@@ -109,10 +105,10 @@
   /* Language flags styles */
   .lang-flag {
     display: block;
-    text-decoration: none;
     color: #00216f;
     font-size: 18px;
     border-radius: 10px;
+    padding: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
     background: none;
@@ -137,7 +133,10 @@
 <header>
   <div class="logo">
     <a href="home.html">
-      <img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" />
+      <img
+        src="../assets/static/global/acs_logo.png"
+        alt="Acronics Solutions"
+      />
     </a>
   </div>
   <nav>
@@ -157,37 +156,41 @@
         <ul class="submenu">
           <li><a href="hpc.html" data-translate="hpc">HPC platforms</a></li>
           <li>
-            <a href="networking_device.html" data-translate="networking">Networking device</a>
+            <a href="networking_device.html" data-translate="networking"
+              >Networking device</a
+            >
           </li>
           <li>
-            <a href="cyber_security.html" data-translate="cyber">Cyber security</a>
+            <a href="cyber_security.html" data-translate="cyber"
+              >Cyber security</a
+            >
           </li>
           <li>
-            <a href="crypto_graphy.html" data-translate="cryptography">Crypto Graphy</a>
+            <a href="crypto_graphy.html" data-translate="cryptography"
+              >Crypto Graphy</a
+            >
           </li>
         </ul>
       </li>
       <li>
-        <a class="normal-btn-header" href="about.html" data-translate="about">About Us</a>
+        <a class="normal-btn-header" href="about.html" data-translate="about"
+          >About Us</a
+        >
       </li>
       <button class="contact-btn" data-translate="contact">Contact Us</button>
-      <li>
-        <a href="#" class="lang-flag active" data-lang="en">
-          <img
-            src="../assets/static/home/flag-for-flag-united-kingdom-svgrepo-com.svg"
-            alt="English"
-            style="width: 20px; height: auto; vertical-align: middle"
-          />
-        </a>
-      </li>
-      <li>
-        <a href="#" class="lang-flag" data-lang="vi">
-          <img
-            src="../assets/static/home/flag-for-flag-vietnam-svgrepo-com.svg"
-            alt="English"
-            style="width: 20px; height: auto; vertical-align: middle"
-        /></a>
-      </li>
+      <a href="#" class="lang-flag active" data-lang="en">
+        <img
+          src="../assets/static/home/flag-for-flag-united-kingdom-svgrepo-com.svg"
+          alt="English"
+          style="width: 20px; height: auto; vertical-align: middle"
+        />
+      </a>
+      <a href="#" class="lang-flag" data-lang="vi" style="margin-left: -15px">
+        <img
+          src="../assets/static/home/flag-for-flag-vietnam-svgrepo-com.svg"
+          alt="English"
+          style="width: 20px; height: auto; vertical-align: middle"
+      /></a>
     </ul>
   </nav>
 </header>

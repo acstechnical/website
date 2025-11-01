@@ -1,4 +1,3 @@
-/* OVERVIEW SECTION */
 .overview {
   position: relative;
   width: 100%;
@@ -66,9 +65,9 @@
 
 .explain_text h3 {
   font-family: "Ubuntu", sans-serif;
-  font-weight: 900;
-  font-size: 40px;
-  text-align: center;
+  font-weight: 800;
+  font-size: 32px;
+  text-align: left;
   margin-bottom: 5vh;
 }
 
@@ -80,7 +79,7 @@
 }
 
 .explain_img:hover {
-  transform: scale(1.08);
+  transform: scale(1.02);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
@@ -110,6 +109,7 @@
 .solution_desc {
   width: 100%;
   text-align: center;
+  margin-bottom: 15vh;
 }
 
 .solution_desc h3 {
@@ -149,8 +149,6 @@
 
 .solution_benefit:hover {
   transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.6); /* làm tối nền */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .solution_benefit img {
@@ -166,7 +164,7 @@
   font-family: "Ubuntu", sans-serif;
   font-weight: 800;
   font-size: 20px;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 .solution_benefit p {
