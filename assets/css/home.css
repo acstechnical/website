@@ -86,7 +86,7 @@
 
 .introduce h1 {
   flex: 0 0 40%;
-  font-size: 3em;
+  font-size: 4.5em;
   color: #7d28ff;
 }
 
@@ -137,7 +137,7 @@
   height: auto;
   background-color: #7d28ff;
   border-radius: 30px;
-  padding: 0.7rem;
+  padding: 0.4rem;
   box-shadow: 0 4px 8px rgba(125, 40, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
