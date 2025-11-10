@@ -55,7 +55,9 @@
   border: rgb(255, 255, 255) 10px solid;
   border-radius: 20px;
   font-family: "Ubuntu", sans-serif;
-  font-weight: 1000;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
   font-size: 20px;
   width: 50vw;
 }
@@ -97,7 +99,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3vh;
   color: #000000;
 }
 
@@ -107,12 +108,15 @@
   max-width: 100%;
   width: 100%;
   border-radius: 30px;
+  gap: 2vh;
   border: 10px solid #000000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3vh 3vw;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
 }
 
 .why {
@@ -137,7 +141,7 @@
 .why h1 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 1000;
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 3vh;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -147,9 +151,9 @@
 .why p {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  width: 50vw;
+  font-size: 35px;
+  width: 60vw;
   text-align: center;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
   text-shadow: 2px 1px 2px #000000;
 }
