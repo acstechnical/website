@@ -150,6 +150,16 @@
   border-radius: 100%;
 }
 
+.solution_benefit {
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.solution_benefit::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
 .solution_benefit:hover {
   transform: scale(1.05);
   background-color: rgba(0, 0, 0, 1);
