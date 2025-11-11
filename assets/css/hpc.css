@@ -333,15 +333,6 @@
   text-align: center;
 }
 
-.new_tech iframe {
-  width: 50vw;
-  height: 30vw;
-  align-self: center;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
 .new_tech_content_container {
   display: flex;
   flex-direction: column;
@@ -380,4 +371,35 @@
 .para {
   margin: 10px 0;
   color: azure !important;
+}
+
+.video_section {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  margin: 2px 0 0 0;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.video_section h3 {
+  align-self: center;
+  margin: 20px 0 20px 0;
+  font-size: clamp(0.5rem, 2vw, 2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(190, 190, 190, 0.7);
+  user-select: none;
+  text-align: center;
+}
+
+.video_section iframe {
+  width: 50vw;
+  height: 30vw;
+  align-self: center;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 0 0 50px 0;
 }
