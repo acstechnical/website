@@ -11,7 +11,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-    padding: 1.5% 4%;
+    padding: 1% 4%;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000; /* Đảm bảo navbar ở trên cùng */
   }
@@ -25,15 +25,20 @@
     user-select: none;
   }
   header .logo img {
-    height: 40px;
-    object-fit: contain;
+    height: 50px;
+    width: 130px;
+    object-fit: fill;
   }
   /* Menu chính */
+  header nav {
+    display: flex;
+    align-items: center;
+  }
   header nav .menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2vw;
+    gap: 4vw;
     list-style: none;
   }
   header nav .menu > li {
@@ -50,6 +55,16 @@
     color: #fafafa;
     background-color: #00216f;
     transition: 200ms linear, color 200ms linear, border 200ms linear;
+  }
+  header nav .language-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    background-color: #ffffff;
+    padding: 7px;
+    border-radius: 100px;
   }
   /* Submenu */
   header nav .submenu {
@@ -108,7 +123,7 @@
     color: #00216f;
     font-size: 18px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
     background: none;
@@ -133,10 +148,7 @@
 <header>
   <div class="logo">
     <a href="home.html">
-      <img
-        src="../assets/static/global/acs_logo.png"
-        alt="Acronics Solutions"
-      />
+      <img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" />
     </a>
   </div>
   <nav>
@@ -156,41 +168,28 @@
         <ul class="submenu">
           <li><a href="hpc.html" data-translate="hpc">HPC platforms</a></li>
           <li>
-            <a href="networking_device.html" data-translate="networking"
-              >Networking device</a
-            >
+            <a href="networking_device.html" data-translate="networking">Networking device</a>
           </li>
           <li>
-            <a href="cyber_security.html" data-translate="cyber"
-              >Cyber security</a
-            >
+            <a href="cyber_security.html" data-translate="cyber">Cyber security</a>
           </li>
           <li>
-            <a href="crypto_graphy.html" data-translate="cryptography"
-              >Cryptography</a
-            >
+            <a href="crypto_graphy.html" data-translate="cryptography">Cryptography</a>
           </li>
         </ul>
       </li>
       <li>
-        <a class="normal-btn-header" href="about.html" data-translate="about"
-          >About Us</a
-        >
+        <a class="normal-btn-header" href="about.html" data-translate="about">About Us</a>
       </li>
       <button class="contact-btn" data-translate="contact">Contact Us</button>
+    </ul>
+  </nav>
+  <nav>
+    <ul class="language-switcher">
       <a href="#" class="lang-flag active" data-lang="en">
-        <img
-          src="../assets/static/home/flag-for-flag-united-kingdom-svgrepo-com.svg"
-          alt="English"
-          style="width: 20px; height: auto; vertical-align: middle"
-        />
+        <img src="../assets/static/home/flag-for-flag-united-kingdom-svgrepo-com.svg" alt="English" style="width: 20px; height: auto; vertical-align: middle" />
       </a>
-      <a href="#" class="lang-flag" data-lang="vi" style="margin-left: -15px">
-        <img
-          src="../assets/static/home/flag-for-flag-vietnam-svgrepo-com.svg"
-          alt="English"
-          style="width: 20px; height: auto; vertical-align: middle"
-      /></a>
+      <a href="#" class="lang-flag" data-lang="vi" style="margin-left: -15px"> <img src="../assets/static/home/flag-for-flag-vietnam-svgrepo-com.svg" alt="English" style="width: 20px; height: auto; vertical-align: middle" /></a>
     </ul>
   </nav>
 </header>

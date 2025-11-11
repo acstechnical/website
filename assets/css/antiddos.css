@@ -36,6 +36,7 @@
   width: 60vw;
   text-align: center;
   filter: drop-shadow(10px 25px 25px rgba(0, 0, 0, 1));
+  text-shadow: 0 0 15px rgba(0, 191, 255, 1);
 }
 
 /* CONTENT SECTION */
@@ -107,9 +108,11 @@
 }
 
 .solution_desc {
+  display: flex;
   width: 100%;
   text-align: center;
-  margin-bottom: 15vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .solution_desc h3 {
@@ -139,16 +142,18 @@
   text-align: center;
   align-content: center;
   color: white;
-  width: 18vw;
-  height: 18vw;
-  transition: transform 0.4s ease, box-shadow 0.4s ease,
-    background-color 0.4s ease;
+  width: 19vw;
+  height: 19vw;
+  overflow: scroll;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
   cursor: pointer;
   border-radius: 100%;
 }
 
 .solution_benefit:hover {
   transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0 10px 30px rgb(117, 101, 255);
 }
 
 .solution_benefit img {
