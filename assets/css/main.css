@@ -3,3 +3,14 @@
   margin: 0;
   padding: 0;
 }
+
+html,
+body {
+  overflow: scroll; /* vẫn cho phép cuộn */
+  scrollbar-width: none; /* ẩn scrollbar trên Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* ẩn scrollbar trên Chrome, Edge, Safari */
+}
