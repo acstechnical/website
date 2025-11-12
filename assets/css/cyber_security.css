@@ -26,3 +26,346 @@
   text-shadow: 0 0 15px rgba(0, 191, 255, 1);
   user-select: none;
 }
+
+.content-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page_header_text {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 100px 0 40px 0;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product_box {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: rox;
+  gap: 3vw;
+  justify-content: space-between;
+  margin: 50px 0 150px 0;
+}
+
+.product_card {
+  width: 30vw;
+  height: 60vh;
+  min-height: 600px;
+  perspective: 1000px; /* tạo chiều sâu để lật 3D */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+  user-select: none;
+}
+
+.product_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 30px;
+}
+
+.product_card.flipped .card_inner {
+  transform: rotateY(180deg);
+}
+
+.card_front,
+.card_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card_front {
+  background-color: white;
+}
+
+.card_front img {
+  width: 100%;
+  height: 80%;
+  object-fit: fill;
+}
+
+.card_front div {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #01042b;
+}
+
+.card_back {
+  background: linear-gradient(145deg, #233153, #0a1528);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_back_content {
+  display: flex;
+  max-height: 90%;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card_back_button {
+  background: linear-gradient(to right, rgb(17, 1, 69), white);
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_back_button button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.card_back h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: azure;
+}
+
+.card_back h3 {
+  margin-bottom: 10px;
+  color: rgb(248, 184, 248);
+}
+
+.card_back ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card_back li {
+  margin-bottom: 10px;
+}
+
+.product_info_container {
+  background-color: rgb(255, 252, 252);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product_info_box {
+  padding: 100px 50px 20px 50px;
+  gap: 10px;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgb(26, 5, 66), rgb(80, 3, 65));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product_info_detail {
+  width: 100%;
+  padding: 2rem 3rem;
+  background: rgb(248, 184, 248, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+.product_info_detail .para {
+  margin-bottom: 2.5rem; /* Khoảng cách giữa các phần (overview, applications, etc.) */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Đường kẻ mỏng phân cách */
+  padding-bottom: 1.5rem; /* Padding dưới để tách biệt */
+}
+
+.product_info_detail .para:last-child {
+  border-bottom: none; /* Không kẻ dưới phần cuối */
+  margin-bottom: 0; /* Loại bỏ margin dưới phần cuối */
+}
+
+/* Style cho các thẻ con để đẹp mắt */
+.product_info_detail h1 {
+  font-size: 2.5rem; /* Kích thước lớn cho tiêu đề chính */
+  font-weight: 700;
+  color: #ffffff; /* Màu nổi bật, khớp với theme */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product_info_detail h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff; /* Màu đậm hơn cho sub-header */
+  margin: 1.5rem 0 1rem;
+  border-left: 4px solid #ffffff; /* Thanh bên trái để nổi bật */
+  padding-left: 1rem;
+}
+
+.product_info_detail h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 1rem 0 0.5rem;
+  font-style: italic; /* Italic để phân biệt */
+}
+
+.product_info_detail h5 {
+  position: relative; /* Để thêm bullet pseudo-element */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0.8rem 0 0.4rem;
+  padding-left: 1.5rem; /* Khoảng cách cho bullet */
+}
+
+.product_info_detail h5::before {
+  content: "•"; /* Dấu chấm kiểu list (bullet) */
+  position: absolute;
+  left: 0;
+  color: #ffffff; /* Màu bullet nổi bật */
+  font-size: 1.5rem; /* Kích thước bullet lớn hơn một chút */
+}
+
+.product_info_detail h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ececec; /* Màu nhạt hơn cho sub-detail */
+  margin: 0.5rem 0;
+  padding-left: 2rem; /* Thụt vào để như sub-item */
+}
+
+.product_info_detail p {
+  font-size: 1rem;
+  line-height: 1.6; /* Khoảng cách dòng dễ đọc */
+  margin-bottom: 1rem;
+  color: #e8e8e8;
+}
+
+/* Thêm hover effect cho interactive */
+.product_info_detail h5:hover {
+  color: #f9b5f5; /* Đổi màu khi hover */
+  transition: color 0.3s ease;
+}
+
+.product_info_spec {
+  width: 100%;
+  max-width: 40vw;
+  height: 80vh;
+  background-color: rgb(1, 4, 67);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_info_spec img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.row_view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 100px;
+}
+
+.page {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_info_img {
+  background: linear-gradient(to right, rgb(26, 5, 66), rgb(80, 3, 65));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px 80px 0px 80px;
+}
+
+.product_info_img button {
+  background: linear-gradient(135deg, rgba(120, 130, 255, 0.3), rgba(200, 210, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 4px;
+  cursor: pointer;
+  border-radius: 0 0px 0px 30px;
+  width: 300px;
+  height: 80px;
+  backdrop-filter: blur(10px);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product_info_img button:hover {
+  background: linear-gradient(135deg, rgba(150, 160, 255, 0.4), rgba(255, 255, 255, 0.15));
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.product_info_img button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
