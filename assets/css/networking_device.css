@@ -71,8 +71,8 @@
 
 .product_card {
   width: 30vw;
-  height: 70vh;
-  min-height: 620px;
+  height: 60vh;
+  min-height: 600px;
   perspective: 1000px; /* tạo chiều sâu để lật 3D */
   cursor: pointer;
   transition: all 0.3s ease;
@@ -200,7 +200,7 @@
 .product_info_box {
   padding: 100px 50px 20px 50px;
   gap: 10px;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to right, rgb(26, 5, 66), rgb(80, 3, 65));
   display: flex;
   flex-direction: row;
@@ -208,13 +208,12 @@
 }
 
 .product_info_detail {
-  width: 100%; /* Chiếm không gian lớn hơn để chứa text, để lại chỗ cho spec image */
-  padding: 2rem 3rem; /* Padding rộng rãi để dễ đọc */
+  width: 100%;
+  padding: 2rem 3rem;
   background: rgb(248, 184, 248, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Bóng nhẹ để nổi bật */
-  overflow-y: auto; /* Nếu nội dung dài, cho phép scroll */
-  font-family: "Montserrat", sans-serif; /* Giữ font nhất quán */
-  color: #ffffff; /* Màu text chính tối, dễ đọc */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
 }
 
 .product_info_detail .para {
@@ -295,8 +294,8 @@
 
 .product_info_spec {
   width: 100%;
-  max-width: 30vw;
-  height: 100%;
+  max-width: 40vw;
+  height: 80vh;
   background-color: rgb(1, 4, 67);
   display: flex;
   flex-direction: column;
@@ -308,4 +307,65 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+.row_view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 100px;
+}
+
+.page {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_info_img {
+  background: linear-gradient(to right, rgb(26, 5, 66), rgb(80, 3, 65));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px 80px 0px 80px;
+}
+
+.product_info_img button {
+  background: linear-gradient(135deg, rgba(120, 130, 255, 0.3), rgba(200, 210, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 4px;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 300px;
+  height: 80px;
+  backdrop-filter: blur(10px);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product_info_img button:hover {
+  background: linear-gradient(135deg, rgba(150, 160, 255, 0.4), rgba(255, 255, 255, 0.15));
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.product_info_img button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
