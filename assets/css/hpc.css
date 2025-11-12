@@ -382,7 +382,13 @@
   flex-direction: column;
 }
 
-.video_section h3 {
+.video {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.video h3 {
+  width: 45vw;
   align-self: center;
   margin: 20px 0 20px 0;
   font-size: clamp(0.5rem, 2vw, 2rem);
@@ -394,9 +400,9 @@
   text-align: center;
 }
 
-.video_section iframe {
-  width: 50vw;
-  height: 30vw;
+.video iframe {
+  width: 35vw;
+  height: 20vw;
   align-self: center;
   border: none;
   border-radius: 20px;
