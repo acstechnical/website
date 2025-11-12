@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acronics Solutions - Devices</title>
-    <link
-      rel="icon"
-      href="..\assets\static\global\acronics_logo_browser_tab.png"
-      type="image/png"
-    />
+    <link rel="icon" href="..\assets\static\global\acronics_logo_browser_tab.png" type="image/png" />
     <link rel="stylesheet" href="..\assets\css\main.css" />
     <link rel="stylesheet" href="..\assets\css\networking_device.css" />
   </head>
@@ -16,72 +12,233 @@
     <div id="header"></div>
     <div class="overview">
       <video autoplay muted loop preload="auto">
-        <source
-          src="..\assets\static\networking_device\background.mp4"
-          type="video/mp4"
-        />
+        <source src="..\assets\static\networking_device\background.mp4" type="video/mp4" />
         Trình duyệt của bạn không hỗ trợ video.
       </video>
       <div class="overlay-text">Networking devices</div>
     </div>
     <main class="content-section">
       <div class="container">
-        <div class="product_container">
-          <img
-            src="..\assets\static\networking_device\switch_device_01.png"
-            alt=""
-          />
-          <section class="product-item">
-            <h2 data-translate="sdn_switch_title"></h2>
-            <ul>
-              <li data-translate="sdn_switch_li1"></li>
-              <li data-translate="sdn_switch_li2"></li>
-              <li data-translate="sdn_switch_li3"></li>
-              <li data-translate="sdn_switch_li4"></li>
-              <li data-translate="sdn_switch_li5"></li>
-              <li data-translate="sdn_switch_li6"></li>
-              <li data-translate="sdn_switch_li7"></li>
-            </ul>
-          </section>
+        <h2 class="page_header_text">Our networking devices</h2>
+        <div class="product_box">
+          <div class="product_card" onclick="flipCard(this)">
+            <div class="card_inner">
+              <div class="card_front">
+                <img src="..\assets\static\networking_device\switch_device_01.png" alt="" />
+                <div>
+                  <h2>SDN Switch</h2>
+                </div>
+              </div>
+              <div class="card_back">
+                <div class="card_back_content">
+                  <h2 data-translate="sdn_switch_title"></h2>
+                  <ul>
+                    <li data-translate="sdn_switch_li1"></li>
+                    <li data-translate="sdn_switch_li2"></li>
+                    <li data-translate="sdn_switch_li3"></li>
+                    <li data-translate="sdn_switch_li4"></li>
+                    <li data-translate="sdn_switch_li5"></li>
+                    <li data-translate="sdn_switch_li6"></li>
+                    <li data-translate="sdn_switch_li7"></li>
+                  </ul>
+                </div>
+                <div class="card_back_button">
+                  <button>Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product_card" onclick="flipCard(this)">
+            <div class="card_inner">
+              <div class="card_front">
+                <img src="..\assets\static\networking_device\switch_device_02.png" alt="" />
+                <div>
+                  <h2>Layer 2/3/4 Switch</h2>
+                </div>
+              </div>
+              <div class="card_back">
+                <div class="card_back_content">
+                  <h2 data-translate="layer_switch_title"></h2>
+                  <ul>
+                    <li data-translate="layer_switch_li1"></li>
+                    <li data-translate="layer_switch_li2"></li>
+                    <li data-translate="layer_switch_li3"></li>
+                    <li data-translate="layer_switch_li4"></li>
+                    <li data-translate="layer_switch_li5"></li>
+                    <li data-translate="layer_switch_li6"></li>
+                    <li data-translate="layer_switch_li7"></li>
+                    <li data-translate="layer_switch_li8"></li>
+                  </ul>
+                </div>
+                <div class="card_back_button">
+                  <button>Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product_card" onclick="flipCard(this)">
+            <div class="card_inner">
+              <div class="card_front">
+                <img src="..\assets\static\networking_device\switch_device_03.png" alt="" />
+                <div>
+                  <h2>BGS – Bidirection Gate Security</h2>
+                </div>
+              </div>
+              <div class="card_back">
+                <div class="card_back_content">
+                  <h2 data-translate="bgs_title"></h2>
+                  <h3 data-translate="bgs_subtitle"></h3>
+                  <ul>
+                    <li data-translate="bgs_li1"></li>
+                    <li data-translate="bgs_li2"></li>
+                    <li data-translate="bgs_li3"></li>
+                    <li data-translate="bgs_li4"></li>
+                    <li data-translate="bgs_li5"></li>
+                    <li data-translate="bgs_li6"></li>
+                    <li data-translate="bgs_li7"></li>
+                  </ul>
+                </div>
+                <div class="card_back_button">
+                  <button>Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="product_container">
-          <section class="product-item">
-            <h2 data-translate="layer_switch_title"></h2>
-            <ul>
-              <li data-translate="layer_switch_li1"></li>
-              <li data-translate="layer_switch_li2"></li>
-              <li data-translate="layer_switch_li3"></li>
-              <li data-translate="layer_switch_li4"></li>
-              <li data-translate="layer_switch_li5"></li>
-              <li data-translate="layer_switch_li6"></li>
-              <li data-translate="layer_switch_li7"></li>
-              <li data-translate="layer_switch_li8"></li>
-            </ul>
-          </section>
-          <img
-            src="..\assets\static\networking_device\switch_device_02.png"
-            alt=""
-          />
+
+        <h2 class="page_header_text">Details</h2>
+      </div>
+      <div class="product_info_container">
+        <div class="product_info_box">
+          <div class="product_info_detail">
+            <div class="para">
+              <h1>ACS SDN – Switch on FPGA</h1>
+              <h4>Next-Generation Software-Defined Network Switch</h4>
+            </div>
+            <div class="para">
+              <h3>Overview</h3>
+              <p>The ACS SDN – Switch, built on advanced FPGA (Field Programmable Gate Array) technology, is a next-generation network switch designed for telecom providers, enterprises, and data centers adopting Software-Defined Networking (SDN).</p>
+              <p>It delivers the full functionality of traditional Layer 2 / Layer 3 switches while supporting OpenFlow 1.3 and 1.4 for dynamic network configuration, intelligent traffic control, and centralized management. Compared to software-based SDN solutions, the ACS SDN – Switch offers significantly higher performance, energy efficiency, and security reliability.</p>
+            </div>
+            <div class="para">
+              <h3>Applications</h3>
+              <h5>Internet Service Providers (ISPs) and Telecom Networks</h5>
+              <h5>Enterprise and Campus Networks</h5>
+              <h5>Cloud and Data Center Infrastructure</h5>
+              <h5>Research and Educational Networks</h5>
+              <h5>Smart City and IoT Infrastructure Systems</h5>
+            </div>
+            <div class="para">
+              <h3>Technical Highlights</h3>
+              <h5><strong>Architecture:</strong> FPGA-based SDN switch supporting OpenFlow 1.3 / 1.4</h5>
+              <h5><strong>Network Layers:</strong> Layer 2 / Layer 3 switching capabilities</h5>
+              <h5><strong>Performance:</strong> Hardware-accelerated packet processing with Multi-Core optimization</h5>
+              <h5><strong>Management Interface:</strong> Open SDN planes with centralized control</h5>
+              <h5><strong>Virtualization:</strong> Network and storage virtualization for modern data centers</h5>
+              <h5><strong>Power Management:</strong> Dynamic active/inactive function control for energy efficiency</h5>
+            </div>
+            <div class="para">
+              <h3>Key Features</h3>
+              <h5>Compliance with International Standards</h5>
+              <h6>Fully compatible with global telecommunications network standards.</h6>
+              <h5>Integrated SDN Controller Support</h5>
+              <h6>Works seamlessly with OpenFlow-based SDN controllers and OF-DPA environments.</h6>
+              <h5>Real-Time Remote Operation</h5>
+              <h6>Enables real-time network configuration, monitoring, and optimization.</h6>
+              <h5>Adaptive Traffic Control</h5>
+              <h6>Dynamically manages and prioritizes traffic for efficient utilization.</h6>
+              <h5>Open and Extensible Design</h5>
+              <h6>Based on open SDN standards for easy integration and long-term scalability.</h6>
+            </div>
+            <div class="para">
+              <h3>Outstanding Features</h3>
+              <h5>Mastery of Core Technology</h5>
+              <h6>Full in-house design of integrated circuits, core logic, control software, and custom PCB boards. Guaranteed security, no hidden code, no backdoors.</h6>
+              <h5>Proprietary Algorithm Development</h5>
+              <h6>Hardware-implemented OpenFlow algorithms on FPGA with proprietary management policies competing with software-based SDN platforms.</h6>
+              <h5>High-Performance Data Throughput</h5>
+              <h6>Accelerated high-speed data processing using hardware-optimized logic and Multi-Core solutions.</h6>
+              <h5>Advanced System Management</h5>
+              <h6>Compatible with network control and monitoring applications for complete operational visibility.</h6>
+              <h5>Proactive Maintenance and Upgrades</h5>
+              <h6>Flexible to feature expansion, standard updates, and hardware upgrades on demand.</h6>
+            </div>
+            <div class="para">
+              <h3>System Advantages</h3>
+              <h5>Real-time, centralized SDN management across multiple layers</h5>
+              <h5>Enhanced energy efficiency with intelligent power control</h5>
+              <h5>Robust security and reliability through proprietary hardware design</h5>
+              <h5>Scalable and adaptable architecture for future technologies</h5>
+            </div>
+            <div class="para"></div>
+          </div>
+          <div class="product_info_spec">
+            <img src="..\assets\static\networking_device\sdn_spec.png" alt="" />
+          </div>
         </div>
-        <div class="product_container">
-          <img
-            src="..\assets\static\networking_device\switch_device_03.png"
-            alt=""
-          />
-          <section class="product-item">
-            <h2 data-translate="bgs_title"></h2>
-            <h3 data-translate="bgs_subtitle"></h3>
-            <ul>
-              <li data-translate="bgs_li1"></li>
-              <li data-translate="bgs_li2"></li>
-              <li data-translate="bgs_li3"></li>
-              <li data-translate="bgs_li4"></li>
-              <li data-translate="bgs_li5"></li>
-              <li data-translate="bgs_li6"></li>
-              <li data-translate="bgs_li7"></li>
-            </ul>
-          </section>
+        <div class="product_info_box">
+          <div class="product_info_detail">
+            <div class="para">
+              <h1>ACS Layer 2/3/4 Switch</h1>
+              <h4>Advanced Multi-Layer Network Switch</h4>
+            </div>
+            <div class="para">
+              <h3>Technical Specifications – Layer 2/3/4 Switching Capabilities</h3>
+            </div>
+            <div class="para">
+              <h3>Layer 2 Switching</h3>
+              <h5>64-entry L2 multicast table.</h5>
+              <h5>Automatic aging and wire-speed learning of L2 addresses — no CPU or software intervention required.</h5>
+              <h5>Spanning Tree Protocol (STP) support with ingress and egress checks.</h5>
+              <h5>Support for 16 multiple spanning trees, each with ingress and egress verification.</h5>
+              <h5>VLAN priority tagging can bypass VLAN processing and be removed on egress.</h5>
+            </div>
+            <div class="para">
+              <h3>Layer 3 Routing</h3>
+              <h5>MPLS forwarding with support for swap, push, pop, and penultimate pop operations.</h5>
+              <h5>4-entry VRF table.</h5>
+              <h5>1,024 × 4 hash-based L3 routing table.</h5>
+              <h5>16-entry L3 routing TCAM for high-speed lookups.</h5>
+              <h5>1,024-entry next-hop table, referenced by routing entries.</h5>
+              <h5>1,024-entry packet modification table used to build L2 headers for next-hop forwarding.</h5>
+              <h5>Configurable ECMP (Equal Cost Multi-Path) support based on:</h5>
+              <h6>L3 protocol field</h6>
+              <h6>L3 ToS</h6>
+              <h6>L4 source/destination ports</h6>
+              <h5>ECMP supports up to 256 parallel paths.</h5>
+            </div>
+            <div class="para">
+              <h3>Layer 2/3/4 Classification and ACL</h3>
+              <h5>L2 classification rules include:</h5>
+              <h6>Source port, Destination MAC, Source MAC, VLAN VID, VLAN PCP, VLAN CFI, Ethernet type.</h6>
+              <h5>32-entry classification / ACL rules supporting:</h5>
+              <h6>Source port, routed flag, VRF, IPv4 / IPv6 / MPLS packet types, source IP, destination IP, ToS, L4 protocol type, L4 source port, L4 destination port, TCP flags.</h6>
+              <h5>Combined L2 and L3 classification for complex lookups exceeding 5-tuple matching.</h5>
+            </div>
+            <div class="para">
+              <h3>QoS and Traffic Management</h3>
+              <h5>5,242,880-bit shared packet buffer memory (4,096 cells × 160 bytes each) shared among all ports.</h5>
+              <h5>8 priority queues per egress port.</h5>
+              <h5>Configurable egress queue mapping from IP ToS, MPLS EXP/TC, or VLAN PCP bits.</h5>
+              <h5>16 ingress admission control entries.</h5>
+              <h5>Strict Priority Scheduler for deterministic traffic handling.</h5>
+              <h5>Egress queue resource limiter with four independent configuration sets.</h5>
+              <h5>Multicast/Broadcast storm control with dedicated token buckets for flooding, broadcast, and multicast traffic.</h5>
+              <h6>Configurable per egress port, either packet-based or byte-based control.</h6>
+            </div>
+            <div class="para">
+              <h3>System Control and Management</h3>
+              <h5>Configuration interface for accessing configuration and status registers/tables.</h5>
+              <h5>LLDP (Link Layer Discovery Protocol) frames can optionally be sent to the CPU for processing.</h5>
+            </div>
+            <div class="para"></div>
+          </div>
+          <!-- <div class="product_info_spec"></div> -->
         </div>
+        <!-- <div class="product_info_box">
+          <div class="product_info_detail"></div>
+          <div class="product_info_spec"></div>
+        </div> -->
       </div>
     </main>
     <div id="footer"></div>
