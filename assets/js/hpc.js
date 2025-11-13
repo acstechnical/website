@@ -45,3 +45,18 @@ function applyTranslations(data) {
     }
   });
 }
+
+const boxes = document.querySelectorAll(".content_box");
+
+boxes.forEach((box) => {
+  const button = box.querySelector("button");
+  const content = box.querySelector(".content");
+
+  button.addEventListener("click", () => {
+    // Nếu muốn chỉ 1 content mở 1 lần, dùng đoạn này:
+    boxes.forEach((b) => b.querySelector(".content").classList.remove("active"));
+
+    // Bật/tắt content tương ứng
+    content.classList.toggle("active");
+  });
+});

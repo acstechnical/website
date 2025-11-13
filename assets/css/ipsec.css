@@ -244,6 +244,10 @@
   gap: 2vh;
 }
 
+.explain_title_text.bisque h4 {
+  color: black;
+}
+
 .explain_title_text h4 {
   font-size: 1.2rem;
   font-weight: 1000;
@@ -273,7 +277,7 @@
 .explain.top.bisque {
   margin: 15vh auto;
   width: 100vw !important;
-  background-color: rgb(255, 180, 89);
+  background-color: bisque;
   margin: 0;
   padding: 10vh 4vw;
   justify-content: center;
@@ -388,4 +392,13 @@
   width: 100%;
   height: fit-content;
   padding: 1vh 0;
+}
+
+.solution_title.bisque {
+  padding: 15vh 0 3vh 0;
+  background-color: bisque;
+}
+
+.solution_box2.bisque {
+  background-color: bisque;
 }

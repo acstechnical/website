@@ -29,7 +29,7 @@
 
 .content-section {
   background-color: #f8f9fa;
-  padding: 60px 0;
+  padding: 60px 0 0 0;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -198,7 +198,7 @@
 }
 
 .product_info_box {
-  padding: 100px 50px 20px 50px;
+  padding: 100px 50px 0px 50px;
   gap: 10px;
   min-height: 100vh;
   background: linear-gradient(to right, rgb(26, 5, 66), rgb(80, 3, 65));
@@ -336,7 +336,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 10px 80px 0px 80px;
+  padding: 0px 50px 0px 80px;
 }
 
 .product_info_img button {

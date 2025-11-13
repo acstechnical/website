@@ -451,3 +451,77 @@
   height: 20vw;
   border-radius: 30px;
 }
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 10vw;
+  user-select: none;
+}
+
+.content_box {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content_box button {
+  padding: 1vh;
+  width: 100%;
+  font-size: clamp(1.5rem, 1.8vw, 2rem);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  border: 2px solid rgb(255, 255, 255);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 3;
+}
+
+.content_box button:hover {
+  color: bisque;
+  border: 2px solid bisque;
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  max-height: 0; /* Ẩn ban đầu */
+  overflow: hidden; /* Giấu phần tràn */
+  opacity: 0; /* Làm mờ đi */
+  transition: all 1s ease; /* Hiệu ứng mượt */
+  background: #000000;
+  margin-top: 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  border: 2px solid rgb(255, 255, 255);
+  gap: 2vw;
+}
+
+/* Khi active thì bung ra */
+.content.active {
+  opacity: 1;
+  max-height: 60vh;
+  transform: translateY(-2vh);
+}
+
+.img_box {
+  height: 40vh;
+  gap: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: row;
+  padding: 2vh;
+}
+
+.img_box img {
+  height: 100%;
+}
