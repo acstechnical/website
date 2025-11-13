@@ -1,0 +1,374 @@
+.overview {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* VIDEO BACKGROUND */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERVIEW TEXT */
+.overview-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 60vw;
+  text-align: center;
+  filter: drop-shadow(10px 25px 25px rgba(0, 0, 0, 1));
+  text-shadow: 0 0 15px rgba(0, 191, 255, 1);
+}
+
+/* CONTENT SECTION */
+.explain {
+  display: flex;
+  margin: 5vh auto;
+  width: 70vw;
+  align-items: center;
+  gap: 3vw;
+  user-select: none;
+}
+
+.explain_text {
+  width: 40%;
+}
+.explain_text h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.explain_text span {
+  font-size: 18px;
+  display: inline-block;
+  text-align: justify;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.explain_text h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  text-align: left;
+  margin-bottom: 5vh;
+}
+
+.explain_img {
+  width: 60%;
+  object-fit: contain;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: zoom-in;
+}
+
+.explain_img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* SOLUTION SECTION */
+.solution {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  height: fit-content;
+  margin-top: 5vh;
+  background-image: url("../static/antiddos/solution_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.solution_img {
+  width: 25%;
+  margin-right: 3vw;
+}
+
+.solution_desc {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.solution_desc h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 1000;
+  font-size: 30px;
+  margin-bottom: 5vh;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.solution_desc_content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+/* EACH BENEFIT CARD */
+.solution_benefit {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  color: white;
+  width: 19vw;
+  height: 19vw;
+  overflow: scroll;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.solution_benefit {
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.solution_benefit::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.solution_benefit:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0 10px 30px rgb(117, 101, 255);
+}
+
+.solution_benefit img {
+  height: 100px;
+  width: 100px;
+  border: 3px solid #000;
+  border-radius: 50%;
+  margin-bottom: 2vh;
+  object-fit: cover;
+}
+
+.solution_benefit h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+.solution_benefit p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  max-width: 300px;
+}
+
+.staticstic_container {
+  background-color: #03011d;
+  width: 100%;
+  height: fit-content;
+  margin-top: 5vh;
+  user-select: none;
+}
+
+.staticstic {
+  margin: 3vh 20vw;
+  width: 60vw;
+  border-radius: 20px;
+}
+
+.explain_title {
+  width: 50%;
+  font-size: 2.5rem;
+  font-weight: 10000;
+  color: rgb(174, 88, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.explain_title.left {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0vh;
+}
+
+.explain_title h3 {
+  margin-bottom: 2vh;
+}
+
+.explain_title h4 {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  color: rgb(0, 0, 0);
+}
+
+.explain_title h4 strong {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  color: rgb(150, 0, 133);
+}
+
+.explain_title_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.explain_title_text h4 {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  color: white;
+}
+
+.explain_title_text h3 {
+  font-size: 1.7rem;
+  font-weight: 1000;
+  color: rgb(255, 0, 0);
+}
+
+.explain_title_text img {
+  margin-top: 2vh;
+  width: 100%;
+}
+
+.explain.top {
+  margin: 15vh auto;
+  width: 100vw !important;
+  background-color: rgb(0, 0, 22);
+  margin: 0;
+  padding: 10vh 4vw;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.solution_title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: blueviolet;
+  font-size: 3rem;
+  padding: 5vh 0 3vh 0;
+}
+
+.solution_box {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 3vw;
+  padding: 5vh 0 5vh 0;
+  margin: 2vh 0;
+}
+
+.solution_card {
+  max-width: 17vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: zoom-in;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.solution_card:hover {
+  transform: scale(1.5) translateY(-1vh);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.solution_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.full {
+  width: 100% !important;
+}
+
+.solution_box2 {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1vw;
+  margin: 3vh 0;
+}
+
+.solution_subbox {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.solution_content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(142, 132, 255);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+  border: 5px solid rgb(9, 0, 28);
+}
+
+.solution_content2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+}
+
+.solution_content2 h4 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgb(24, 0, 79);
+  user-select: none;
+  width: 100%;
+}

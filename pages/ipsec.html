@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acronics Solutions - IPSec</title>
-    <link
-      rel="icon"
-      href="../assets/static/global/acronics_logo_browser_tab.png"
-      type="image/png"
-    />
+    <link rel="icon" href="../assets/static/global/acronics_logo_browser_tab.png" type="image/png" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/antiddos.css" />
+    <link rel="stylesheet" href="../assets/css/ipsec.css" />
   </head>
 
   <body>
@@ -19,10 +15,7 @@
       <!-- <img class="background" src="../assets\static\antiddos\background.png" alt="" /> -->
       <section class="video-container">
         <video autoplay muted loop preload="auto">
-          <source
-            src="..\assets\static\ipsec\background_finished_02.mp4"
-            type="video/mp4"
-          />
+          <source src="..\assets\static\ipsec\background_finished_02.mp4" type="video/mp4" />
           Trình duyệt của bạn không hỗ trợ video.
         </video>
       </section>
@@ -31,48 +24,108 @@
 
     <div class="content">
       <div class="explain_box">
+        <div class="explain top">
+          <div class="explain_title"><h3>The Need for High Speed IPSec</h3></div>
+          <div class="explain_title_text">
+            <h4>IP Security (IPSec) is a security protocol that provides a secure way to authenticate senders and encrypt IP (IPv4 and IPv6) traffic between networks.</h4>
+            <h4>IPSec offers the benefits of data confidentiality, data integrity, sender authentication, and anti-replay services</h4>
+          </div>
+        </div>
+
         <div class="explain">
           <div class="explain_text">
             <h3 data-translate="explain_IPSec_title1">What are IPSec modes?</h3>
-            <span data-translate="explain_IPSec_content1">
-              IPSec works on two modes to exchange traffic for Virtual Private
-              Network in the most secure ways. There are two types of IPSec
-              modes: tunnel mode and transport mode.
-            </span>
+            <span data-translate="explain_IPSec_content1"> IPSec works on two modes to exchange traffic for Virtual Private Network in the most secure ways. There are two types of IPSec modes: tunnel mode and transport mode. </span>
             <h4 data-translate="explain_IPSec_strong1">Transport mode</h4>
-            <span data-translate="explain_IPSec_content3">
-              Protect traffic by delivering packets directly between the two
-              hosts that have established the IPsec tunnel. That is, when the
-              communication and cryptography endpoints are the same. The IP
-              packet’s payload is encrypted, but the IP header is not.
-            </span>
+            <span data-translate="explain_IPSec_content3"> Protect traffic by delivering packets directly between the two hosts that have established the IPsec tunnel. That is, when the communication and cryptography endpoints are the same. The IP packet’s payload is encrypted, but the IP header is not. </span>
             <h4 data-translate="explain_IPSec_strong1">Tunnel mode</h4>
-            <span data-translate="explain_IPSec_content4">
-              Tunnel mode encapsulates the original IP packet into another
-              packet in the VPN tunnel to protect traffic. This method
-              authenticates peers using pre-shared keys with IKE or digital
-              certificates with IKE.
-            </span>
+            <span data-translate="explain_IPSec_content4"> Tunnel mode encapsulates the original IP packet into another packet in the VPN tunnel to protect traffic. This method authenticates peers using pre-shared keys with IKE or digital certificates with IKE. </span>
           </div>
-          <img
-            class="explain_img"
-            src="..\assets\static\ipsec\ipsec_desc_01.png"
-            alt="DDoS Explanation"
-          />
+          <img class="explain_img" src="..\assets\static\ipsec\ipsec_desc_01.png" alt="DDoS Explanation" />
         </div>
+
         <div class="explain">
-          <img
-            class="explain_img"
-            src="..\assets\static\ipsec\ipsec_desc_02.png"
-            alt="DDoS Explanation"
-          />
+          <img class="explain_img" src="..\assets\static\ipsec\ipsec_desc_02.png" alt="DDoS Explanation" />
           <div class="explain_text">
             <h3 data-translate="explain_IPSec_title2">How does IPSec work?</h3>
-            <span data-translate="explain_IPSec_content2">
-              Now finally you understand the components of IPSec, let’s learn
-              how these components work and create a secure path for senders and
-              receivers to communicate.
-            </span>
+            <span data-translate="explain_IPSec_content2"> Now finally you understand the components of IPSec, let’s learn how these components work and create a secure path for senders and receivers to communicate. </span>
+          </div>
+        </div>
+        <div class="explain top">
+          <div class="explain_title"><h3>IPSec Overview</h3></div>
+          <div class="explain_title_text">
+            <h4>The trend of applying new generation networks, centralized and capable of processing large amounts of data such as Big Data, Cloud Computing has become a necessity recently.</h4>
+            <h4>The speed of data transfer, the speed of the communication & connection standards are increased vigorously (e.g, Fiber optic 10g-40G, PCIe-Gen3 standard ...).</h4>
+            <h3>Requires a fast, reliable security system to meet the real-time data security needs of the network.</h3>
+          </div>
+        </div>
+
+        <div class="explain">
+          <div class="explain_title">
+            <h3>Goal of this Proof of Concept Development</h3>
+            <h4>Develop PoC for high-speed IPSec system, security and authentication applications in Data Centers, in Cloud systems, security meets real-time applications.</h4>
+          </div>
+          <img class="explain_img" src="..\assets\static\ipsec\ipsec_desc_03.png" alt="" />
+        </div>
+
+        <h2 class="solution_title">Some solutions for IPSec Systems</h2>
+        <div class="solution_box">
+          <div class="solution_card">
+            <img src="../assets/static/ipsec/ipsec_solution_01.png" alt="" />
+          </div>
+          <div class="solution_card">
+            <img src="../assets/static/ipsec/ipsec_solution_02.png" alt="" />
+          </div>
+          <div class="solution_card">
+            <img src="../assets/static/ipsec/ipsec_solution_03.png" alt="" />
+          </div>
+          <div class="solution_card">
+            <img src="../assets/static/ipsec/ipsec_solution_04.png" alt="" />
+          </div>
+        </div>
+
+        <div class="explain top">
+          <div class="explain_title"><h3>High Speed IPSec Development on Solution 2nd</h3></div>
+          <div class="explain_title_text">
+            <img src="..\assets\static\ipsec\ipsec_desc_04.png" alt="" />
+            <h4>Phase 1st (IKE SA): by IKE Daemon - Linux Crypto Framework.</h4>
+            <h4>Phase 2nd (IPsec SA) by GCS solution: Plugin Crypto driver and HW accelerator for AES, SHA.</h4>
+          </div>
+        </div>
+
+        <div class="explain">
+          <div class="explain_title left">
+            <h3>IPSec System Development Demonstration</h3>
+            <h4><strong>Hardware</strong></h4>
+            <h4>- FPGA Zedboard with Dual ARMs microprocessors</h4>
+            <h4>- Dual Ethernet ports</h4>
+            <h4><strong>OS and Crypto Framework </strong></h4>
+            <h4>- Linux OS</h4>
+            <h4>- Strongswan</h4>
+            <h4><strong>IPSec build-in</strong></h4>
+            <h4>- Hardware AES, SHA-256</h4>
+            <h4>- Cryptography driver</h4>
+          </div>
+          <img class="explain_img" src="..\assets\static\ipsec\ipsec_desc_05.png" alt="" />
+        </div>
+
+        <h2 class="solution_title">IPSec Testing Results</h2>
+        <div class="solution_box2">
+          <div class="solution_subbox">
+            <div class="solution_content2">
+              <img src="../assets/static/ipsec/ipsec_test_01.png" alt="" />
+              <h4>Bandwidth testing with IPSec by Hardware</h4>
+            </div>
+          </div>
+          <div class="solution_subbox">
+            <div class="solution_content2">
+              <img src="../assets/static/ipsec/ipsec_test_02.png" alt="" />
+              <h4>Bandwidth testing with IPSec by Software</h4>
+            </div>
+            <div class="solution_content2">
+              <img src="../assets/static/ipsec/ipsec_test_03.png" alt="" />
+              <h4>Bandwidth testing without IPSec</h4>
+            </div>
           </div>
         </div>
       </div>
