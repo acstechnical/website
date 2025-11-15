@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acronics Solutions - Crypto Graphy</title>
-    <link rel="icon" href="..\assets\static\global\acronics_logo_browser_tab.png" type="image/png" />
+    <link
+      rel="icon"
+      href="..\assets\static\global\acronics_logo_browser_tab.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="..\assets\css\main.css" />
     <link rel="stylesheet" href="..\assets\css\crypto_graphy.css" />
   </head>
   <body>
     <div id="header"></div>
     <div class="overview">
+      d
       <video autoplay muted loop preload="auto">
-        <source src="..\assets\static\crypto_graphy\background.mp4" type="video/mp4" />
+        <source
+          src="..\assets\static\crypto_graphy\background.mp4"
+          type="video/mp4"
+        />
         Trình duyệt của bạn không hỗ trợ video.
       </video>
       <div class="overlay-text">Cryptography</div>
@@ -54,11 +62,33 @@
           <h3>Core Architecture: Control & Management Policies</h3>
         </div>
         <div class="attribute_content">
-          <div><p>Monitoring policies based on User ID and Group ID → ACL</p></div>
-          <div><p>Cybersecurity: IPSec/TSL combined with hardware–software co-design to ensure throughput for real-time applications</p></div>
-          <div><p>Network protection: Built-in DDoS mitigation at Layer 3/4 and Layer 6/7</p></div>
-          <div><p>Detection of viruses/malware embedded (hidden) within network traffic</p></div>
-          <div><p>DPI-based traffic analysis for QoS requirements and industrial control protocols (SCADA)</p></div>
+          <div>
+            <p>Monitoring policies based on User ID and Group ID → ACL</p>
+          </div>
+          <div>
+            <p>
+              Cybersecurity: IPSec/TSL combined with hardware–software co-design
+              to ensure throughput for real-time applications
+            </p>
+          </div>
+          <div>
+            <p>
+              Network protection: Built-in DDoS mitigation at Layer 3/4 and
+              Layer 6/7
+            </p>
+          </div>
+          <div>
+            <p>
+              Detection of viruses/malware embedded (hidden) within network
+              traffic
+            </p>
+          </div>
+          <div>
+            <p>
+              DPI-based traffic analysis for QoS requirements and industrial
+              control protocols (SCADA)
+            </p>
+          </div>
         </div>
       </div>
       <div class="firewall_thread">
@@ -68,128 +98,205 @@
         <div class="attribute_content_bulk">
           <div class="attribute_card">
             <div>
-              <p><strong>Content-ID:</strong> Detects and prevents threats such as malware, unauthorized data, files, and web content</p>
+              <p>
+                <strong>Content-ID:</strong> Detects and prevents threats such
+                as malware, unauthorized data, files, and web content
+              </p>
             </div>
-            <img src="../assets/static/crypto_graphy/firewall_thr_1.png" alt="" />
+            <img
+              src="../assets/static/crypto_graphy/firewall_thr_1.png"
+              alt=""
+            />
           </div>
           <div class="attribute_card">
             <div>
-              <p><strong>User-ID:</strong> Controls all group and user information within the network using the Active Directory data repository</p>
+              <p>
+                <strong>User-ID:</strong> Controls all group and user
+                information within the network using the Active Directory data
+                repository
+              </p>
             </div>
-            <img src="../assets/static/crypto_graphy/firewall_thr_2.png" alt="" />
+            <img
+              src="../assets/static/crypto_graphy/firewall_thr_2.png"
+              alt=""
+            />
           </div>
           <div class="attribute_card">
             <div>
-              <p><strong>App-ID:</strong> Accurately identifies applications passing through the network using various techniques such as application signatures, port decryption, protocols, and inspection</p>
+              <p>
+                <strong>App-ID:</strong> Accurately identifies applications
+                passing through the network using various techniques such as
+                application signatures, port decryption, protocols, and
+                inspection
+              </p>
             </div>
-            <img src="../assets/static/crypto_graphy/firewall_thr_3.png" alt="" />
+            <img
+              src="../assets/static/crypto_graphy/firewall_thr_3.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
     </div>
-
     <div class="module_container">
-      <div class="module_1">
-        <div class="module_title">
-          <h3>Module 1- Switch Fabric & Dataplane</h3>
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>Structure</h4>
-            <p>- Layer 2/3: forwarding</p>
-            <p>- QoS management</p>
-            <p>- ARP</p>
-            <p>- NAC</p>
-            <p>- Router</p>
+      <!-- Module 1 -->
+      <div class="module">
+        <h3 class="module_title" onclick="toggleModule('module1-content')">
+          Module 1 - Switch Fabric & Dataplane
+        </h3>
+        <div id="module1-content" class="module_content">
+          <div class="sub_section">
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>Structure</h4>
+                <ul>
+                  <li>Layer 2/3: forwarding</li>
+                  <li>QoS management</li>
+                  <li>ARP</li>
+                  <li>NAC</li>
+                  <li>Router</li>
+                </ul>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_1_firewall.png"
+                alt="Module 1 Structure Diagram"
+              />
+            </div>
           </div>
-          <img src="..\assets\static\crypto_graphy\module_1_firewall.png" alt="" />
         </div>
       </div>
-      <div class="module_2">
-        <div class="module_title">
-          <h3>Module 2 – Security: SSL/IPSec Architecture for Small and Medium Networks</h3>
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>Data flows within the system</h4>
-          </div>
-          <img src="..\assets\static\crypto_graphy\module_2_firewall_1.png" alt="" />
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>SSL/IPSec hardware model</h4>
-          </div>
-          <img src="..\assets\static\crypto_graphy\module_2_firewall_2.png" alt="" />
-        </div>
 
-        <div class="module_title">
-          <h3>Module 2 – Security: TLS/IPSec Architecture for Large-Scale Networks</h3>
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>Multi-threaded concurrent data flows</h4>
+      <!-- Module 2 -->
+      <div class="module">
+        <h3 class="module_title" onclick="toggleModule('module2-content')">
+          Module 2 – Security: SSL/IPSec Architecture
+        </h3>
+        <div id="module2-content" class="module_content">
+          <div class="sub_section">
+            <h4 class="sub_title">
+              SSL/IPSec Architecture for Small and Medium Networks
+            </h4>
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>Data flows within the system</h4>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_2_firewall_1.png"
+                alt="Data Flows Diagram"
+              />
+            </div>
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>SSL/IPSec hardware model</h4>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_2_firewall_2.png"
+                alt="Hardware Model Diagram"
+              />
+            </div>
           </div>
-          <img src="..\assets\static\crypto_graphy\module_2_firewall_3.png" alt="" />
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>Large-scale TLS/SSL hardware architecture model</h4>
+          <div class="sub_section">
+            <h4 class="sub_title">
+              TLS/IPSec Architecture for Large-Scale Networks
+            </h4>
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>Multi-threaded concurrent data flows</h4>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_2_firewall_3.png"
+                alt="Concurrent Flows Diagram"
+              />
+            </div>
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>Large-scale TLS/SSL hardware architecture model</h4>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_2_firewall_4.png"
+                alt="Large-Scale Architecture Diagram"
+              />
+            </div>
           </div>
-          <img src="..\assets\static\crypto_graphy\module_2_firewall_4.png" alt="" />
-        </div>
-
-        <div class="module_title">
-          <h3>Details of key modules : Detailed description of the high-speed IPSec traffic security module</h3>
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>Detailed architecture with Multi-Cores and Multi-ARMs</h4>
+          <div class="sub_section">
+            <h4 class="sub_title">
+              Details of key modules: Detailed description of the high-speed
+              IPSec traffic security module
+            </h4>
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>Detailed architecture with Multi-Cores and Multi-ARMs</h4>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_2_firewall_5.png"
+                alt="Multi-Core Architecture Diagram"
+              />
+            </div>
           </div>
-          <img src="..\assets\static\crypto_graphy\module_2_firewall_5.png" alt="" />
         </div>
       </div>
-      <div class="module_3">
-        <div class="module_title">
-          <h3>Module 3 - IDS/IPS</h3>
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <h4>Overview of the IDS/IPS Block Diagram</h4>
-          </div>
-          <img src="..\assets\static\crypto_graphy\module_3_firewall_1.png" alt="" />
-        </div>
-        <div class="module_text">
-          <h4>Detection:</h4>
-          <p>- Packets with specific or specialized formats</p>
-          <p>- Abnormal behavior</p>
-          <p>- Abnormal traffic</p>
-          <p>- Malware</p>
-          <p>- Viruses</p>
-          <h4>Response:</h4>
-          <p>- Alerting</p>
-          <p>- Blocking</p>
-          <p>- Special functions</p>
-        </div>
 
-        <div class="module_title">
-          <h3>Extracting and analyzing Payloads to detect malware</h3>
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <p>Massive volume of data</p>
-            <p>Wide variety of malware</p>
-            <p>Snort & Suricata rules: hundreds of thousands</p>
-            <p>Use GPUs or multiple parallel FPGAs for processing</p>
+      <!-- Module 3 -->
+      <div class="module">
+        <h3 class="module_title" onclick="toggleModule('module3-content')">
+          Module 3 - IDS/IPS
+        </h3>
+        <div id="module3-content" class="module_content">
+          <div class="sub_section">
+            <div class="sub_content">
+              <div class="sub_text">
+                <h4>Overview of the IDS/IPS Block Diagram</h4>
+                <div class="sub_text">
+                  <h4>Detection:</h4>
+                  <ul>
+                    <li>Packets with specific or specialized formats</li>
+                    <li>Abnormal behavior</li>
+                    <li>Abnormal traffic</li>
+                    <li>Malware</li>
+                    <li>Viruses</li>
+                  </ul>
+                  <h4>Response:</h4>
+                  <ul>
+                    <li>Alerting</li>
+                    <li>Blocking</li>
+                    <li>Special functions</li>
+                  </ul>
+                </div>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_3_firewall_1.png"
+                alt="IDS/IPS Block Diagram"
+              />
+            </div>
           </div>
-          <img src="..\assets\static\crypto_graphy\module_3_firewall_2.png" alt="" />
-        </div>
-        <div class="module_content">
-          <div class="module_text">
-            <p>Limited data volume</p>
-            <p>Standard SCADA formats: easier to detect</p>
-            <p>Real-time requirements – use FPGA for processing</p>
+          <div class="sub_section">
+            <h4 class="sub_title">
+              Extracting and analyzing Payloads to detect malware
+            </h4>
+            <div class="sub_content">
+              <div class="sub_text">
+                <p>Massive volume of data</p>
+                <p>Wide variety of malware</p>
+                <p>Snort & Suricata rules: hundreds of thousands</p>
+                <p>Use GPUs or multiple parallel FPGAs for processing</p>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_3_firewall_2.png"
+                alt="Massive Data Processing Diagram"
+              />
+            </div>
+            <div class="sub_content">
+              <div class="sub_text">
+                <p>Limited data volume</p>
+                <p>Standard SCADA formats: easier to detect</p>
+                <p>Real-time requirements – use FPGA for processing</p>
+              </div>
+              <img
+                src="..\assets\static\crypto_graphy\module_3_firewall_3.png"
+                alt="Limited Data Processing Diagram"
+              />
+            </div>
           </div>
-          <img src="..\assets\static\crypto_graphy\module_3_firewall_3.png" alt="" />
         </div>
       </div>
     </div>
