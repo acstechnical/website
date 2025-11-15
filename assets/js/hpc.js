@@ -46,17 +46,26 @@ function applyTranslations(data) {
   });
 }
 
-const boxes = document.querySelectorAll(".content_box");
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll(".content_box");
 
-boxes.forEach((box) => {
-  const button = box.querySelector("button");
-  const content = box.querySelector(".content");
+  boxes.forEach((box) => {
+    const button = box.querySelector("button");
+    const content = box.querySelector(".content");
 
-  button.addEventListener("click", () => {
-    // Nếu muốn chỉ 1 content mở 1 lần, dùng đoạn này:
-    boxes.forEach((b) => b.querySelector(".content").classList.remove("active"));
+    button.addEventListener("click", (e) => {
+      e.preventDefault(); // Ngăn hành vi mặc định nếu cần
 
-    // Bật/tắt content tương ứng
-    content.classList.toggle("active");
+      const isOpen = content.classList.contains("active"); // Kiểm tra trạng thái hiện tại
+
+      // Đóng tất cả các content (bao gồm cái đang mở)
+      boxes.forEach((b) => b.querySelector(".content").classList.remove("active"));
+
+      // Nếu cái này chưa mở (isOpen = false), thì mở nó
+      if (!isOpen) {
+        content.classList.add("active");
+      }
+      // Nếu đã mở, thì không làm gì (đã đóng ở trên)
+    });
   });
 });

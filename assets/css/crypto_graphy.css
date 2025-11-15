@@ -209,17 +209,19 @@
 
 .module_container {
   max-width: 1500px;
+  display: flex;
+  flex-direction: column;
   margin: 10vh auto;
   overflow: hidden;
-  background-color: white;
-  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   font-size: 1.2em;
   font-weight: 600;
+  gap: 16px;
 }
 
 .module {
-  border-bottom: 1px solid #e9ecef;
+  border: 2px solid #cbd1d6;
+  border-radius: 12px;
 }
 
 .module:last-child {

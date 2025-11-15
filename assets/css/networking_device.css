@@ -155,7 +155,7 @@
 }
 .card_back h2 {
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: azure;
 }
 .card_back h3 {
@@ -168,7 +168,7 @@
 }
 .card_back li {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 .product_info_container {
   background-color: rgb(255, 252, 252);

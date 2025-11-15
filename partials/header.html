@@ -15,7 +15,6 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000; /* Đảm bảo navbar ở trên cùng */
   }
-
   header.scrolled {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -144,6 +143,131 @@
     justify-content: center;
     text-align: center;
   }
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 0;
+    border: none;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #00216f;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+  }
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .close:hover {
+    opacity: 0.7;
+  }
+  .modal-body {
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00216f;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #00216f;
+  }
+  .form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  .submit-btn {
+    background-color: #00216f;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  .submit-btn:hover {
+    background-color: #001a55;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 95%;
+      margin: 10% auto;
+    }
+    .modal-header {
+      padding: 15px;
+    }
+    .modal-body {
+      padding: 15px;
+    }
+  }
 </style>
 <header>
   <div class="logo">
@@ -192,7 +316,13 @@
           >About Us</a
         >
       </li>
-      <button class="contact-btn" data-translate="contact">Contact Us</button>
+      <button
+        class="contact-btn"
+        data-translate="contact"
+        onclick="openModal()"
+      >
+        Contact Us
+      </button>
     </ul>
   </nav>
   <nav>
@@ -213,4 +343,54 @@
     </ul>
   </nav>
 </header>
+<!-- Modal Contact Form -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 data-translate="contact_form_title">Contact Us</h2>
+      <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name" data-translate="name_label">Tên (Name):</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="phone" data-translate="phone_label"
+            >Số điện thoại (Phone):</label
+          >
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="email" data-translate="email_label">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message" data-translate="message_label"
+            >Nội dung gửi (Message):</label
+          >
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" data-translate="send">
+          Send Message
+        </button>
+      </form>
+      <div
+        id="formMessage"
+        style="
+          display: none;
+          margin-top: 10px;
+          padding: 10px;
+          border-radius: 5px;
+          text-align: center;
+        "
+      ></div>
+    </div>
+  </div>
+</div>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
 <script src="../assets/js/language.js"></script>

@@ -460,14 +460,12 @@
   padding: 2vh 10vw;
   user-select: none;
 }
-
 .content_box {
   width: 100%;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
-
 .content_box button {
   padding: 1vh;
   width: 100%;
@@ -479,14 +477,12 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   z-index: 3;
 }
-
 .content_box button:hover {
   color: bisque;
   border: 2px solid bisque;
   transform: scale(1.02);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-
 .content {
   max-height: 0; /* Ẩn ban đầu */
   overflow: hidden; /* Giấu phần tràn */
@@ -504,24 +500,21 @@
   border: 2px solid rgb(255, 255, 255);
   gap: 2vw;
 }
-
 /* Khi active thì bung ra */
 .content.active {
   opacity: 1;
   max-height: 60vh;
   transform: translateY(-2vh);
 }
-
 .img_box {
   height: 40vh;
   gap: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: row;
+  flex-direction: row; /* Sửa từ 'row' thành flex-direction: row để rõ ràng */
   padding: 2vh;
 }
-
 .img_box img {
   height: 100%;
 }
