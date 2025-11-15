@@ -73,3 +73,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setTimeout(() => localStorage.removeItem("carouselStartTime"), 24 * 60 * 60 * 1000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel");
+  const devices = document.querySelectorAll(".device");
+
+  devices.forEach((device) => {
+    device.addEventListener("mouseenter", () => {
+      carousel.classList.add("paused");
+    });
+
+    device.addEventListener("mouseleave", () => {
+      carousel.classList.remove("paused");
+    });
+
+    // Hỗ trợ touch cho mobile
+    device.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      carousel.classList.add("paused");
+    });
+
+    device.addEventListener("touchend", () => {
+      carousel.classList.remove("paused");
+    });
+  });
+});
