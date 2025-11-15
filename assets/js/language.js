@@ -13,10 +13,16 @@ async function loadTranslations(lang) {
 }
 
 let translations = {};
-let currentLang = "en";
+let currentLang = localStorage.getItem("siteLang") || "en";
 
 async function updateLanguage(lang) {
   currentLang = lang;
+  // Persist selection so switching pages keeps the chosen language
+  try {
+    localStorage.setItem("siteLang", lang);
+  } catch (e) {
+    // ignore storage errors (e.g., private mode)
+  }
   translations = await loadTranslations(lang);
   document.querySelectorAll("[data-translate]").forEach((el) => {
     const key = el.getAttribute("data-translate");
@@ -50,7 +56,8 @@ function initLanguage() {
       }
     });
   });
-  updateLanguage("en");
+  // Apply saved or default language
+  updateLanguage(currentLang);
 }
 
 // Chạy init ngay
