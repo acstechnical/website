@@ -1,4 +1,3 @@
-// Phần còn lại của code language (loadTranslations, updateLanguage, etc.) giữ nguyên
 async function loadTranslations(lang) {
   try {
     const response = await fetch(`../assets/locales/${lang}.json`);
@@ -14,16 +13,10 @@ async function loadTranslations(lang) {
 }
 
 let translations = {};
-let currentLang = localStorage.getItem("siteLang") || "en";
+let currentLang = "en";
 
 async function updateLanguage(lang) {
   currentLang = lang;
-  // Persist selection so switching pages keeps the chosen language
-  try {
-    localStorage.setItem("siteLang", lang);
-  } catch (e) {
-    // ignore storage errors (e.g., private mode)
-  }
   translations = await loadTranslations(lang);
   document.querySelectorAll("[data-translate]").forEach((el) => {
     const key = el.getAttribute("data-translate");
@@ -57,14 +50,17 @@ function initLanguage() {
       }
     });
   });
-  // Apply saved or default language
-  updateLanguage(currentLang);
+  updateLanguage("en");
 }
+
+// Chạy init ngay
+initLanguage();
 
 let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   if (window.pageYOffset > 20) {
+    // Bắt đầu thay đổi sau khi scroll > 50px
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
