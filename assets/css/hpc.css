@@ -108,7 +108,7 @@
 .description h3 {
   color: #00bfff; /* Neon blue cho headers */
   font-weight: 700;
-  font-size: clamp(1.5rem, 4vw, 2em); /* Responsive font */
+  font-size: clamp(1.5rem, 4vw, 2.2em); /* Responsive font */
   margin-bottom: 15px;
   letter-spacing: 0.5px; /* Spacing nhẹ cho impact */
   text-transform: uppercase; /* Uppercase cho tiêu đề (bỏ nếu không thích) */
@@ -126,7 +126,7 @@
 }
 .description p {
   line-height: 1.8;
-  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
   text-align: justify;
 }
 .description.active {
@@ -225,7 +225,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 300px;
   padding: 10px;
 }
 
@@ -235,13 +234,13 @@
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
   text-transform: uppercase;
 }
 
 .overview-desc-text p {
   line-height: 1.8;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
   text-align: justify;
   color: #000000; /* Text sáng hơn (light cyan) để tương phản với xanh đậm */
   margin-bottom: 15px;
