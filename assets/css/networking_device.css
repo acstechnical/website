@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 .overview video {
   width: 100%;
@@ -190,13 +190,14 @@
   padding: 2rem 3rem;
   background: rgb(248, 184, 248, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   color: #ffffff;
 }
 .product_info_detail .para {
   margin-bottom: 2.5rem; /* Khoảng cách giữa các phần (overview, applications, etc.) */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Đường kẻ mỏng phân cách */
   padding-bottom: 1.5rem; /* Padding dưới để tách biệt */
+  padding-left: 1rem; /* Padding bên trái để căn chỉnh */
 }
 .product_info_detail .para:last-child {
   border-bottom: none; /* Không kẻ dưới phần cuối */
@@ -215,7 +216,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   color: #ffffff; /* Màu đậm hơn cho sub-header */
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 1.2rem;
   border-left: 4px solid #ffffff; /* Thanh bên trái để nổi bật */
   padding-left: 1rem;
 }
@@ -228,8 +229,8 @@
 }
 .product_info_detail h5 {
   position: relative; /* Để thêm bullet pseudo-element */
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 400;
   color: #ffffff;
   margin: 0.8rem 0 0.4rem;
   padding-left: 1.5rem; /* Khoảng cách cho bullet */
@@ -242,16 +243,17 @@
   font-size: 1.5rem; /* Kích thước bullet lớn hơn một chút */
 }
 .product_info_detail h6 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: #ececec; /* Màu nhạt hơn cho sub-detail */
   margin: 0.5rem 0;
   padding-left: 2rem; /* Thụt vào để như sub-item */
 }
 .product_info_detail p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6; /* Khoảng cách dòng dễ đọc */
   margin-bottom: 1rem;
+  font-weight: 300;
   color: #e8e8e8;
 }
 /* Thêm hover effect cho interactive */
