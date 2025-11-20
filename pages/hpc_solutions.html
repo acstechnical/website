@@ -55,18 +55,53 @@
         <p>Tốc độ trên CPU, dưới GPU – dung hòa tốc độ. Tự thiết kế, tự phát triển, đóng gói : hoàn toàn trong nước. Làm chủ công nghệ nên tự chủ trong bảo trì, nâng cấp => phù hợp với yêu cầu đơn vị</p>
         <img src="..\assets\static\home\hpc_sample_01.png" alt="" />
       </div>
+      <h2>Kiến trúc HPC chính</h2>
+      <div class="architect_desc_container">
+        <div class="architect_desc_card">
+          <h3>Sử dụng kiến trúc Host PCIe</h3>
+          <p>Phụ thuộc vào Host của hãng</p>
+          <p>Số Card FPGA giới hạn, phụ thuộc hãng</p>
+          <p>Phụ thuộc vào chương trình điều khiển Card của Host hãng</p>
+        </div>
+        <div class="architect_desc_card marked_img_2">
+          <h3>Sử dụng kiến trúc Gigabit Switch</h3>
+          <p>Gigabit Switch tự thiết kế, phát triển</p>
+          <p>Card FPGA tự thiết kế, phát triển</p>
+          <p>Khả năng mở rộng dễ dàng - ghép tầng (Switch : 8 Port, cho ghép 2 tầng Mỗi tầng 8 card FPGA)</p>
+          <p>=> Làm chủ công nghệ 100%</p>
+        </div>
+      </div>
     </div>
 
     <div class="hpc_architects">
-      <h2>Các kiến trúc HPC</h2>
       <div class="architect_card_container">
+        <div class="architect_card">
+          <img src="..\assets\static\hpc_solutions\hpc_arch_2.png" alt="" />
+          <h4>Kiến trúc Cluster theo PCIe kết nối Host</h4>
+        </div>
         <div class="architect_card">
           <img src="..\assets\static\hpc_solutions\hpc_arch_1.png" alt="" />
           <h4>Kiến trúc Node theo Gigabit Switch</h4>
         </div>
-        <div class="architect_card">
-          <img src="..\assets\static\hpc_solutions\hpc_arch_2.png" alt="" />
-          <h4>Kiến trúc Cluster theo PCIe kết nối Host</h4>
+      </div>
+    </div>
+
+    <div class="our_hpc_platform">
+      <h2>Nền tảng hệ thống HPC phát triển trên kiến trúc Cluster Gigabit Switch do Cty tự phát triển</h2>
+      <div class="our_hpc_platform_container">
+        <div class="column_content hidden-column">
+          <img src="..\assets\static\hpc_solutions\hpc_3.png" alt="" />
+          <img src="..\assets\static\hpc_solutions\hpc_4.png" alt="" />
+        </div>
+        <div class="column_content trigger-column">
+          <img src="..\assets\static\hpc_solutions\hpc_5.png" alt="" />
+          <div class="our_hpc_platform_text">
+            <h3>Giải pháp HPC của công ty phát triển trên SoC-FPGA, cho phép triển khai nhiều yêu cầu cụ thể, phục vụ công tác chuyên môn nghiệp vụ liên quan đến đơn vị như phát triển:</h3>
+            <p>hệ thống Pentest</p>
+            <p>hệ thống phân tích và nhận diện mã độc</p>
+            <p>hệ thống thám mã</p>
+            <p>hệ thống phân tích và dự báo nguy cơ mất an toàn thông tin, (5) xử lý dữ liệu lớn</p>
+          </div>
         </div>
       </div>
     </div>
@@ -74,5 +109,17 @@
     <div id="footer"></div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/hpc_solutions.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const trigger = document.querySelector(".trigger-column");
+        const hidden = document.querySelector(".hidden-column");
+        trigger.addEventListener("mouseenter", function () {
+          hidden.classList.add("visible");
+        });
+        trigger.addEventListener("mouseleave", function () {
+          hidden.classList.remove("visible");
+        });
+      });
+    </script>
   </body>
 </html>
