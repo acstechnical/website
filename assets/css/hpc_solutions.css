@@ -1,0 +1,260 @@
+.overview {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+.overview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Chữ ở giữa ảnh */
+.overview .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 5rem);
+  width: 80%;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(0, 191, 255, 1);
+  user-select: none;
+}
+
+/* Overview description - Updated với nền xanh đậm */
+.overview-desc {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 40px auto;
+  padding: clamp(15px, 4vw, 30px);
+  background-color: #ffffff;
+  border-radius: 12px;
+  animation: fadeInUp 1s ease-out forwards;
+  user-select: none;
+  gap: clamp(20px, 5%, 40px);
+}
+
+.overview-desc img {
+  width: clamp(250px, 20%, 500px);
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 31, 63, 0.5); /* Shadow xanh đậm cho img */
+  transition: transform 0.3s ease;
+}
+
+.overview-desc img:hover {
+  transform: scale(1.02);
+}
+
+.overview-desc-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.overview-desc-text h3 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: #00bfff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+  text-transform: uppercase;
+}
+
+.overview-desc-text p {
+  line-height: 1.8;
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+  text-align: justify;
+  color: #000000; /* Text sáng hơn (light cyan) để tương phản với xanh đậm */
+  margin-bottom: 15px;
+}
+
+/* Specific cho strong và em */
+.overview-desc-text strong {
+  color: #00bfff;
+  font-weight: 600;
+}
+
+.overview-desc-text em {
+  color: #034f9c; /* Xanh nhạt cho em */
+  font-style: italic;
+}
+
+/* Media queries (giữ nguyên, chỉ tinh chỉnh text color nếu cần) */
+@media (max-width: 768px) {
+  .overview-desc {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .overview-desc img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .overview-desc-text {
+    min-width: auto;
+    padding: 0;
+  }
+
+  .overview-desc-text h3 {
+    margin-bottom: 15px;
+    text-transform: none;
+  }
+
+  .overview-desc-text p {
+    text-align: left;
+    font-size: 0.95rem;
+    color: #ffffff; /* White thuần trên mobile cho rõ */
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-desc {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .overview-desc-text h3 {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+  }
+}
+
+.select_tech_hpc {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 40px 20px;
+}
+
+.select_tech_hpc h2 {
+  text-align: center;
+  padding: 30px 0 10px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+  user-select: none;
+}
+
+.select_tech_hpc h3 {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+  user-select: none;
+  padding-bottom: 20px;
+}
+
+.select_tech_hpc p {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+  text-align: center;
+  color: #dddddd;
+}
+
+.tech_card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.tech_hpc_card {
+  background-color: #111111;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ẩn ảnh trong các thẻ có class marked_img */
+.marked_img img {
+  margin-top: 30px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.marked_img:hover {
+  transform: translateY(-150px);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
+}
+
+.transform_up_hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
+}
+
+/* Bung ra */
+.marked_img:hover img {
+  max-height: 500px; /* lớn hơn chiều cao thực tế của ảnh */
+  opacity: 1;
+}
+
+.hpc_architects {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 40px 20px;
+}
+
+.hpc_architects h2 {
+  text-align: center;
+  padding: 30px 0 10px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  user-select: none;
+}
+
+.architect_card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.architect_card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}

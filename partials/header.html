@@ -272,17 +272,17 @@
 <header>
   <div class="logo">
     <a href="home.html">
-      <img
-        src="../assets/static/global/acs_logo.png"
-        alt="Acronics Solutions"
-      />
+      <img src="../assets/static/global/acs_logo.png" alt="Acronics Solutions" />
     </a>
   </div>
   <nav>
     <ul class="menu">
       <li class="dropdown">
-        <a href="antiddos.html" data-translate="solutions">Solutions</a>
+        <a href="#" data-translate="solutions">Solutions</a>
         <ul class="submenu">
+          <li>
+            <a href="hpc_solutions.html" data-translate="">HPC</a>
+          </li>
           <li>
             <a href="antiddos.html" data-translate="antiddos">AntiDDoS</a>
           </li>
@@ -291,55 +291,32 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a href="hpc.html" data-translate="products">Products</a>
+        <a href="#" data-translate="products">Products</a>
         <ul class="submenu">
           <li><a href="hpc.html" data-translate="hpc">HPC platforms</a></li>
           <li>
-            <a href="networking_device.html" data-translate="networking"
-              >Networking device</a
-            >
+            <a href="networking_device.html" data-translate="networking">Networking device</a>
           </li>
           <li>
-            <a href="cyber_security.html" data-translate="cyber"
-              >Cyber security</a
-            >
+            <a href="cyber_security.html" data-translate="cyber">Cyber security</a>
           </li>
           <li>
-            <a href="crypto_graphy.html" data-translate="cryptography"
-              >Cryptography</a
-            >
+            <a href="crypto_graphy.html" data-translate="cryptography">Cryptography</a>
           </li>
         </ul>
       </li>
       <li>
-        <a class="normal-btn-header" href="about.html" data-translate="about"
-          >About Us</a
-        >
+        <a class="normal-btn-header" href="about.html" data-translate="about">About Us</a>
       </li>
-      <button
-        class="contact-btn"
-        data-translate="contact"
-        onclick="openModal()"
-      >
-        Contact Us
-      </button>
+      <button class="contact-btn" data-translate="contact" onclick="openModal()">Contact Us</button>
     </ul>
   </nav>
   <nav>
     <ul class="language-switcher">
       <a href="#" class="lang-flag active" data-lang="en">
-        <img
-          src="../assets/static/home/flag-for-flag-united-kingdom-svgrepo-com.svg"
-          alt="English"
-          style="width: 20px; height: auto; vertical-align: middle"
-        />
+        <img src="../assets/static/home/flag-for-flag-united-kingdom-svgrepo-com.svg" alt="English" style="width: 20px; height: auto; vertical-align: middle" />
       </a>
-      <a href="#" class="lang-flag" data-lang="vi" style="margin-left: -15px">
-        <img
-          src="../assets/static/home/flag-for-flag-vietnam-svgrepo-com.svg"
-          alt="English"
-          style="width: 20px; height: auto; vertical-align: middle"
-      /></a>
+      <a href="#" class="lang-flag" data-lang="vi" style="margin-left: -15px"> <img src="../assets/static/home/flag-for-flag-vietnam-svgrepo-com.svg" alt="English" style="width: 20px; height: auto; vertical-align: middle" /></a>
     </ul>
   </nav>
 </header>
@@ -357,9 +334,7 @@
           <input type="text" id="name" name="name" required />
         </div>
         <div class="form-group">
-          <label for="phone" data-translate="phone_label"
-            >Số điện thoại (Phone):</label
-          >
+          <label for="phone" data-translate="phone_label">Số điện thoại (Phone):</label>
           <input type="tel" id="phone" name="phone" required />
         </div>
         <div class="form-group">
@@ -367,31 +342,15 @@
           <input type="email" id="email" name="email" required />
         </div>
         <div class="form-group">
-          <label for="message" data-translate="message_label"
-            >Nội dung gửi (Message):</label
-          >
+          <label for="message" data-translate="message_label">Nội dung gửi (Message):</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit" class="submit-btn" data-translate="send">
-          Send Message
-        </button>
+        <button type="submit" class="submit-btn" data-translate="send">Send Message</button>
       </form>
-      <div
-        id="formMessage"
-        style="
-          display: none;
-          margin-top: 10px;
-          padding: 10px;
-          border-radius: 5px;
-          text-align: center;
-        "
-      ></div>
+      <div id="formMessage" style="display: none; margin-top: 10px; padding: 10px; border-radius: 5px; text-align: center"></div>
     </div>
   </div>
 </div>
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="../assets/js/language.js"></script>
 <script src="../assets/js/contact.js"></script>
