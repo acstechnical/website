@@ -8,6 +8,7 @@ html,
 body {
   overflow: scroll; /* vẫn cho phép cuộn */
   scrollbar-width: none; /* ẩn scrollbar trên Firefox */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html::-webkit-scrollbar,
