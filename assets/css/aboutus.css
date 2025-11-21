@@ -34,7 +34,6 @@
 }
 
 .overview-text {
-  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 48px;
   color: #ffffff;
@@ -45,7 +44,7 @@
 .intro {
   color: #ffffff;
   border-radius: 20px;
-  font-family: "Ubuntu", sans-serif;
+
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.2px;
@@ -84,7 +83,6 @@
 }
 
 .intro_text {
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 18px;
   display: flex;
@@ -127,7 +125,6 @@
 }
 
 .why h1 {
-  font-family: "Ubuntu", sans-serif;
   font-weight: 600;
   font-size: 50px;
   margin-bottom: 3vh;
@@ -137,7 +134,6 @@
 }
 
 .why p {
-  font-family: "Times New Roman", Times, serif;
   font-weight: 500;
   font-size: 35px;
   width: 60vw;
