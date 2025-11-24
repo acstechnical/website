@@ -21,7 +21,7 @@ async function updateLanguage(lang) {
   document.querySelectorAll("[data-translate]").forEach((el) => {
     const key = el.getAttribute("data-translate");
     if (translations[key]) {
-      el.textContent = translations[key];
+      el.innerHTML = translations[key];
     }
   });
   // Update active flag
