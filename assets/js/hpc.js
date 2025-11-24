@@ -1,71 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  const descriptions = document.querySelectorAll(".description");
+// Lấy riêng desc_card_1
+const card1 = document.querySelector(".desc_card_1");
+const track = card1.querySelector(".sliding_track");
+const pages = card1.querySelectorAll(".sliding_page");
 
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      // Remove selected class from all cards
-      cards.forEach((c) => c.classList.remove("selected"));
+let currentPage = 0;
 
-      // Add selected to current
-      card.classList.add("selected");
-
-      // Hide all descriptions
-      descriptions.forEach((desc) => desc.classList.remove("active"));
-
-      // Get the desc id
-      const descId = card.getAttribute("data-desc");
-
-      // Show the corresponding description
-      if (descId) {
-        const targetDesc = document.getElementById(descId);
-        if (targetDesc) {
-          targetDesc.classList.add("active");
-        }
-      }
-    });
-  });
-});
-
-function applyTranslations(data) {
-  document.querySelectorAll("[data-translate]").forEach((el) => {
-    const key = el.getAttribute("data-translate");
-    if (data && data[key]) {
-      try {
-        // Thử innerHTML trước (parse tag)
-        el.innerHTML = data[key];
-        // Nếu vẫn lỗi (hiếm), fallback plain text bằng cách strip tags
-        if (el.innerHTML.includes("<em>") && !el.querySelector("em")) {
-          // Check nếu tag không render
-          el.innerHTML = data[key].replace(/<em>(.*?)<\/em>/g, "$1"); // Strip <em>
-        }
-      } catch (e) {
-        el.textContent = data[key]; // Fallback textContent nếu innerHTML fail
-      }
-    }
-  });
+function goToPage(n) {
+  const containerWidth = card1.querySelector(".content_container").offsetWidth;
+  if (n < 0 || n >= pages.length) return;
+  currentPage = n;
+  track.style.transform = `translateX(-${n * containerWidth}px)`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const boxes = document.querySelectorAll(".content_box");
+// Gán sự kiện
+card1.querySelector(".left_sliding").onclick = () => goToPage(currentPage - 1);
+card1.querySelector(".right_sliding").onclick = () => goToPage(currentPage + 1);
 
-  boxes.forEach((box) => {
-    const button = box.querySelector("button");
-    const content = box.querySelector(".content");
+document.querySelectorAll(".vid_nav_item").forEach((nav) => {
+  nav.addEventListener("click", () => {
+    // remove active from all
+    document.querySelectorAll(".vid_nav_item").forEach((n) => n.classList.remove("active_nav"));
+    nav.classList.add("active_nav");
 
-    button.addEventListener("click", (e) => {
-      e.preventDefault(); // Ngăn hành vi mặc định nếu cần
+    const target = nav.dataset.target;
 
-      const isOpen = content.classList.contains("active"); // Kiểm tra trạng thái hiện tại
+    // hide all videos
+    document.querySelectorAll(".video").forEach((v) => v.classList.remove("active_vid"));
 
-      // Đóng tất cả các content (bao gồm cái đang mở)
-      boxes.forEach((b) => b.querySelector(".content").classList.remove("active"));
-
-      // Nếu cái này chưa mở (isOpen = false), thì mở nó
-      if (!isOpen) {
-        content.classList.add("active");
-      }
-      // Nếu đã mở, thì không làm gì (đã đóng ở trên)
-    });
+    // show target video
+    document.querySelector(`.${target}`).classList.add("active_vid");
   });
 });

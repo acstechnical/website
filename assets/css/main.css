@@ -4,6 +4,161 @@
   padding: 0;
 }
 
+.overview {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* VIDEO BACKGROUND */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERVIEW TEXT */
+.overview-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 60vw;
+  text-align: center;
+  filter: drop-shadow(10px 25px 25px rgba(0, 0, 0, 1));
+  text-shadow: 0 0 15px rgba(0, 191, 255, 1);
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: 1000;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(194, 0, 253);
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: 1000;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+h4 {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 2vh;
+}
+
+h5 {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2vh;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+span {
+  font-family: sans-serif;
+  font-size: 18px;
+  display: inline-block;
+  text-align: justify;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.text_bright {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgb(157, 0, 255);
+}
+
+/* flex */
+
+.flex_1 {
+  flex: 1;
+  overflow: hidden;
+}
+
+.flex_2 {
+  flex: 2;
+  overflow: hidden;
+}
+
+.flex_3 {
+  flex: 3;
+  overflow: hidden;
+}
+
+.flex_4 {
+  flex: 4;
+  overflow: hidden;
+}
+
+.flex_5 {
+  flex: 5;
+  overflow: hidden;
+}
+
+.flex_6 {
+  flex: 6;
+  overflow: hidden;
+}
+
+.flex_7 {
+  flex: 7;
+  overflow: hidden;
+}
+
+.flex_8 {
+  flex: 8;
+  overflow: hidden;
+}
+
+.flex_9 {
+  flex: 9;
+  overflow: hidden;
+}
+
+.flex_10 {
+  flex: 10;
+  overflow: hidden;
+}
+
 html,
 body {
   overflow: scroll; /* vẫn cho phép cuộn */

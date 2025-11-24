@@ -268,6 +268,13 @@
       padding: 15px;
     }
   }
+  header.hide-header {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  header {
+    transition: transform 0.3s ease;
+  }
 </style>
 <header>
   <div class="logo">
@@ -352,5 +359,65 @@
   </div>
 </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  const header = document.querySelector("header");
+
+  let touchStartY = 0;
+  let lastDirection = null;
+  const threshold = 12; // ngưỡng chống nhiễu, để cảm giác mượt hơn
+
+  /* --- Desktop / laptop: wheel & trackpad --- */
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      if (e.deltaY > threshold) {
+        // scroll xuống
+        if (lastDirection !== "down") {
+          header.classList.add("hide-header");
+          lastDirection = "down";
+        }
+      } else if (e.deltaY < -threshold) {
+        // scroll lên
+        if (lastDirection !== "up") {
+          header.classList.remove("hide-header");
+          lastDirection = "up";
+        }
+      }
+    },
+    { passive: true }
+  );
+
+  /* --- Mobile / iPad / iPhone: touch --- */
+  window.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "touchmove",
+    (e) => {
+      const currentY = e.touches[0].clientY;
+      const diff = touchStartY - currentY;
+
+      if (diff > threshold) {
+        // swipe lên → trang cuộn xuống
+        if (lastDirection !== "down") {
+          header.classList.add("hide-header");
+          lastDirection = "down";
+        }
+      } else if (diff < -threshold) {
+        // swipe xuống → trang cuộn lên
+        if (lastDirection !== "up") {
+          header.classList.remove("hide-header");
+          lastDirection = "up";
+        }
+      }
+    },
+    { passive: true }
+  );
+</script>
 <script src="../assets/js/language.js"></script>
 <script src="../assets/js/contact.js"></script>
