@@ -4,229 +4,138 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acronics Solutions - Cyber Security</title>
-    <link
-      rel="icon"
-      href="..\assets\static\global\acronics_logo_browser_tab.png"
-      type="image/png"
-    />
-    <link rel="stylesheet" href="..\assets\css\main.css" />
-    <link rel="stylesheet" href="..\assets\css\cyber_security.css" />
+    <link rel="icon" href="../assets/static/global/acronics_logo_browser_tab.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/cyber_security.css" />
   </head>
+
   <body>
     <div id="header"></div>
-    <div class="overview">
-      <video autoplay muted loop preload="auto">
-        <source
-          src="..\assets\static\cyber_security\background.mp4"
-          type="video/mp4"
-        />
-        Trình duyệt của bạn không hỗ trợ video.
-      </video>
-      <div class="overlay-text">Cyber Security</div>
+
+    <div class="snap_container">
+      <!-- SLIDE 1 — Overview -->
+      <div class="overview_slide">
+        <div class="overview">
+          <section class="video-container">
+            <video autoplay muted loop preload="auto">
+              <source src="../assets/static/cyber_security/background.mp4" type="video/mp4" />
+              Trình duyệt của bạn không hỗ trợ video.
+            </video>
+          </section>
+          <div class="overview-text">Cyber Security</div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 — DESC CARD 1 -->
+      <div class="desc_card_1">
+        <div class="button_box">
+          <div class="left_sliding"></div>
+          <div class="right_sliding"></div>
+        </div>
+
+        <div class="content_container">
+          <div class="sliding_track">
+            <!-- PAGE 1 -->
+            <div class="sliding_page card_1_page_1">
+              <div class="flex_5 single_content_row end_row gap_standard border_radius_default_img">
+                <img src="../assets/static/cyber_security/antiddos_device.png" />
+                <div class="detail gray_bkgr scrollable spacing_title">
+                  <h3 data-translate="antiddos_title"></h3>
+                  <h4 data-translate="antiddos_li1"></h4>
+                  <h4 data-translate="antiddos_li2"></h4>
+                  <h4 data-translate="antiddos_li3"></h4>
+                  <h4 data-translate="antiddos_li4"></h4>
+                  <h4 data-translate="antiddos_li5"></h4>
+                  <h4 data-translate="antiddos_li6"></h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAGE 2 -->
+            <div class="sliding_page card_1_page_2">
+              <div class="flex_1 single_content_column">
+                <img src="../assets/static/cyber_security/packet_analysis.png" />
+                <h3>Deep Packet Inspection</h3>
+                <p>AI-based DPI system for advanced cyber attack detection.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 — DESC CARD 2 -->
+      <div class="desc_card_2">
+        <div class="button_box">
+          <div class="left_sliding"></div>
+          <div class="right_sliding"></div>
+        </div>
+
+        <div class="content_container">
+          <div class="sliding_track">
+            <!-- PAGE 1 -->
+            <div class="sliding_page card_1_page_1">
+              <div class="flex_5 single_content_row end_row gap_standard">
+                <img src="../assets/static/cyber_security/malware_device.png" />
+                <div class="detail gray_bkgr scrollable">
+                  <h2>Malware Detection</h2>
+                  <h4>FPGA-based CNN Malware Detection Engine</h4>
+                  <h4>Real-time processing 100Gbps</h4>
+                  <h4>Zero OS-level vulnerabilities</h4>
+                  <h4>Self-developed FPGA OS</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAGE 2 -->
+            <div class="sliding_page card_1_page_2">
+              <div class="flex_1 single_content_column">
+                <h2>GUI Screenshots</h2>
+                <img class="no_scale" src="../assets/static/cyber_security/security_gui_1.png" />
+                <img class="no_scale" src="../assets/static/cyber_security/security_gui_2.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 — DESC CARD 3 -->
+      <div class="desc_card_3">
+        <div class="button_box">
+          <div class="left_sliding"></div>
+          <div class="right_sliding"></div>
+        </div>
+
+        <div class="content_container">
+          <div class="sliding_track">
+            <div class="sliding_page card_1_page_1">
+              <div class="flex_1 single_content_column">
+                <h2>Cyber Defense Videos</h2>
+              </div>
+            </div>
+
+            <div class="sliding_page card_1_page_4">
+              <div class="video_container flex_10">
+                <div class="video vid_1 active_vid">
+                  <h3>Cyber Attack Detection</h3>
+                  <iframe src="https://www.youtube.com/embed/68IyMgsF3v0"></iframe>
+                </div>
+                <div class="video vid_2">
+                  <h3>Malware Tracing Demo</h3>
+                  <iframe src="https://www.youtube.com/embed/Ef0ItagAmdA"></iframe>
+                </div>
+              </div>
+              <div class="video_navigator flex_1">
+                <div class="vid_nav_item active_nav" data-target="vid_1"></div>
+                <div class="vid_nav_item" data-target="vid_2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <main class="content-section">
-      <div class="container">
-        <h2 class="page_header_text">Cyber Security Devices</h2>
-        <div class="product_box">
-          <div
-            class="product_card"
-            onclick="flipCard(this)"
-            data-info-index="0"
-          >
-            <div class="card_inner">
-              <div class="card_front">
-                <img
-                  src="..\assets\static\cyber_security\antiddos_device.png"
-                  alt=""
-                />
-                <div>
-                  <h2 data-translate="antiddos_title"></h2>
-                </div>
-              </div>
-              <div class="card_back">
-                <div class="card_back_content">
-                  <h2 data-translate="antiddos_title"></h2>
-                  <ul>
-                    <li data-translate="antiddos_li1"></li>
-                    <li data-translate="antiddos_li2"></li>
-                    <li data-translate="antiddos_li3"></li>
-                    <li data-translate="antiddos_li4"></li>
-                    <li data-translate="antiddos_li5"></li>
-                    <li data-translate="antiddos_li6"></li>
-                    <li data-translate="antiddos_li7"></li>
-                    <li data-translate="antiddos_li8"></li>
-                  </ul>
-                </div>
-                <div class="card_back_button">
-                  <button>Read More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product_info_container">
-        <div class="product_info_box" data-info-index="0" style="display: none">
-          <div class="product_info_detail">
-            <div class="para center">
-              <h1>ACS Network Security Device</h1>
-              <h4>High-Performance FPGA/ASIC-Based Anti-DDoS Defender</h4>
-            </div>
-            <div class="row_view">
-              <div class="page">
-                <div class="para">
-                  <h3>The Need for a DDoS Defense Solution</h3>
-                  <p>
-                    Modern DDoS attacks are growing in both scale and
-                    complexity, exploiting the rapid expansion of the Internet
-                    of Things (IoT) and the availability of attack tools capable
-                    of generating traffic reaching hundreds of gigabits per
-                    second (Gbps).
-                  </p>
-                  <p>
-                    Attackers increasingly employ multi-vector techniques,
-                    combining multiple attack methods at different protocol
-                    layers, which makes detection and mitigation significantly
-                    more challenging.
-                  </p>
-                  <p>
-                    This escalating threat environment requires an adaptive,
-                    high-performance security solution that can effectively
-                    detect and mitigate DDoS attacks of varying intensity and
-                    form.
-                  </p>
-                </div>
-                <div class="para">
-                  <h3>FPGA/ASIC-Based DDoS Defender Solution</h3>
-                  <p>
-                    The ACS DDoS Defender leverages FPGA/ASIC-based hardware
-                    acceleration to deliver real-time, parallel packet
-                    processing at the network edge, ensuring early detection and
-                    mitigation of high-bandwidth DDoS attacks.
-                  </p>
-                  <p>
-                    This hardware-driven approach provides superior detection
-                    speed, low latency, and robust defense capabilities compared
-                    to traditional software-based systems.
-                  </p>
-                </div>
-                <div class="para">
-                  <h3>Core Features</h3>
-                  <h5>1. DDoS Attack Detection</h5>
-                  <h6>
-                    Detects attacks based on traffic thresholds and packet
-                    attribute sets per IP, identifying anomalies indicative of
-                    potential attacks.
-                  </h6>
-                  <h6>Supports detection of multiple attack types:</h6>
-                  <h6>Bandwidth Attacks: UDP Flood, ICMP Flood, etc.</h6>
-                  <h6>Protocol Attacks: SYN Flood, etc.</h6>
-                  <h6>
-                    Application Layer Attacks: HTTP Flood, HTTPS Flood,
-                    Slowloris, etc.
-                  </h6>
-                  <h6>
-                    Detection latency: under 1 second from the onset of attack.
-                  </h6>
-                </div>
-              </div>
-              <div class="page">
-                <div class="para">
-                  <h5>2. DDoS Attack Mitigation</h5>
-                  <h6>
-                    Implements Challenge–Response mechanisms to block malicious
-                    traffic while maintaining uninterrupted service for
-                    legitimate users.
-                  </h6>
-                  <h6>Bandwidth limiting to protect critical resources.</h6>
-                  <h6>
-                    Configurable White List / Black List for filtering traffic
-                    from suspicious or verified sources.
-                  </h6>
-                </div>
-                <div class="para">
-                  <h5>3. DDoS Attack Monitoring</h5>
-                  <h6>Real-time attack monitoring dashboard providing:</h6>
-                  <h6>Source IP details</h6>
-                  <h6>Bandwidth usage statistics</h6>
-                  <h6>Attack type and status information</h6>
-                  <h6>
-                    Email alert notifications for administrators upon detection
-                    of attacks.
-                  </h6>
-                </div>
-                <div class="para">
-                  <h3>Outstanding Features</h3>
-                  <h5>Easy System Integration</h5>
-                  <h6>
-                    Simple to deploy between Router and Firewall in Server or
-                    Data Center environments.
-                  </h6>
-                  <h6>
-                    Supports transparent inline deployment without complex
-                    reconfiguration.
-                  </h6>
-                  <h5>Comprehensive High-Performance Solution</h5>
-                  <h6>
-                    Provides complete multi-layer protection (Layer 2/3/6/7)
-                    against:
-                  </h6>
-                  <h6>Bandwidth-based attacks</h6>
-                  <h6>Protocol-level attacks</h6>
-                  <h6>Application-layer attacks</h6>
-                  <h6>
-                    FPGA acceleration ensures high-speed handling of large-scale
-                    traffic and early attack warnings with precise, efficient
-                    mitigation.
-                  </h6>
-                  <h5>Optimized Management and Monitoring</h5>
-                  <h6>
-                    Centralized monitoring interface with full attack visibility
-                    and event tracking.
-                  </h6>
-                  <h6>
-                    Automated real-time alerts and email notifications to
-                    network administrators.
-                  </h6>
-                  <h6>
-                    Simplified configuration and maintenance, ensuring
-                    continuous network protection.
-                  </h6>
-                </div>
-                <div class="para">
-                  <h3>System Advantages</h3>
-                  <h5>
-                    Hardware-based real-time DDoS detection (&lt;1 second)
-                  </h5>
-                  <h5>
-                    FPGA/ASIC acceleration for ultra-low latency and high
-                    throughput
-                  </h5>
-                  <h5>
-                    Multi-layer protection: Layer 2/3 network + Layer 6/7
-                    application defense
-                  </h5>
-                  <h5>Centralized management and remote alerting via email</h5>
-                  <h5>
-                    Easy integration into existing network infrastructures
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product_info_img">
-          <button
-            onclick="window.open('..\\assets\\static\\cyber_security\\Acronics_Sysnef-Def_Tech_Spec.docx.pdf', '_blank')"
-          >
-            View Anti-DDoS specification PDF
-          </button>
-        </div>
-      </div>
-    </main>
+
     <div id="footer"></div>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/cyber_security.js"></script>
-    <script src="../assets/js/networking_device.js"></script>
+    <script src="../assets/js/hpc.js"></script>
   </body>
 </html>

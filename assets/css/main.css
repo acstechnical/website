@@ -102,6 +102,10 @@ strong {
   font-size: 1.1rem;
 }
 
+.no_text_transform {
+  text-transform: none !important;
+}
+
 .text_bright {
   color: #ffffff;
   text-shadow: 0 0 15px rgb(157, 0, 255);

@@ -30,7 +30,8 @@
 .desc_card_1,
 .desc_card_2,
 .desc_card_3,
-.desc_card_4 {
+.desc_card_4,
+.desc_card_5 {
   position: relative;
   min-height: 100vh;
   width: 100vw;
@@ -48,7 +49,8 @@
 .desc_card_1::before,
 .desc_card_2::before,
 .desc_card_3::before,
-.desc_card_4::before {
+.desc_card_4::before,
+.desc_card_5::before {
   content: "";
   position: absolute;
   top: 0;
@@ -63,7 +65,8 @@
 .desc_card_1 > *,
 .desc_card_2 > *,
 .desc_card_3 > *,
-.desc_card_4 > * {
+.desc_card_4 > *,
+.desc_card_5 > * {
   position: relative;
   z-index: 2;
 }
@@ -79,6 +82,8 @@
 }
 .desc_card_4 {
   background-color: rgb(210, 255, 206);
+}
+.desc_card_5 {
 }
 
 /* --------- Buttons -------- */
@@ -147,6 +152,25 @@
 }
 .right_sliding::before {
   transform: rotate(45deg);
+}
+
+/* Ẩn nút khi không cần thiết */
+.left_sliding.hidden,
+.right_sliding.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-1vw) scale(0.8); /* vẫn giữ vị trí để không bị nhảy layout */
+}
+
+.right_sliding.hidden {
+  transform: translateX(1vw) scale(0.8);
+}
+
+/* Hiệu ứng mượt khi hiện/ẩn */
+.left_sliding,
+.right_sliding {
+  opacity: 1;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 /* --------- Content inside slide pages--------- */
@@ -270,8 +294,20 @@
   display: none;
 }
 
+.detail {
+  height: 80%;
+  width: 100%;
+  opacity: 1;
+  transition: width 0.5s ease, opacity 0.35s ease;
+  padding: 2rem;
+}
+
 .image_with_desc {
   gap: 2vh;
+}
+
+.gap_standard {
+  gap: 5vw;
 }
 
 .border_shadow {
@@ -282,6 +318,11 @@
 
 .no_padding {
   padding: 1vh 1vw !important;
+}
+
+.no_scale {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .scrollable {
@@ -369,7 +410,7 @@
   display: flex;
   flex-direction: row;
   color: #000;
-  padding: 2vh 1vw;
+  padding: 10vh 1vw 2vh 1vw;
 }
 
 .card_1_page_3 {
@@ -377,4 +418,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10vh 1vw 2vh 1vw;
+  color: #000;
+}
+
+.card_1_page_4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 1vw 2vh 1vw;
 }
