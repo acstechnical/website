@@ -1,71 +1,78 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  const descriptions = document.querySelectorAll(".description");
+// Hàm xử lý sliding chung cho mọi desc_card
+function initSlider(card) {
+  if (!card) return;
 
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      // Remove selected class from all cards
-      cards.forEach((c) => c.classList.remove("selected"));
+  const track = card.querySelector(".sliding_track");
+  const pages = card.querySelectorAll(".sliding_page");
+  const leftBtn = card.querySelector(".left_sliding");
+  const rightBtn = card.querySelector(".right_sliding");
+  const container = card.querySelector(".content_container");
 
-      // Add selected to current
-      card.classList.add("selected");
+  if (!track || pages.length <= 1) {
+    // Nếu chỉ có 1 trang hoặc không có trang → ẩn luôn cả 2 nút
+    if (leftBtn) leftBtn.classList.add("hidden");
+    if (rightBtn) rightBtn.classList.add("hidden");
+    return;
+  }
 
-      // Hide all descriptions
-      descriptions.forEach((desc) => desc.classList.remove("active"));
+  let currentPage = 0;
+  const totalPages = pages.length;
 
-      // Get the desc id
-      const descId = card.getAttribute("data-desc");
-
-      // Show the corresponding description
-      if (descId) {
-        const targetDesc = document.getElementById(descId);
-        if (targetDesc) {
-          targetDesc.classList.add("active");
-        }
-      }
-    });
-  });
-});
-
-function applyTranslations(data) {
-  document.querySelectorAll("[data-translate]").forEach((el) => {
-    const key = el.getAttribute("data-translate");
-    if (data && data[key]) {
-      try {
-        // Thử innerHTML trước (parse tag)
-        el.innerHTML = data[key];
-        // Nếu vẫn lỗi (hiếm), fallback plain text bằng cách strip tags
-        if (el.innerHTML.includes("<em>") && !el.querySelector("em")) {
-          // Check nếu tag không render
-          el.innerHTML = data[key].replace(/<em>(.*?)<\/em>/g, "$1"); // Strip <em>
-        }
-      } catch (e) {
-        el.textContent = data[key]; // Fallback textContent nếu innerHTML fail
-      }
+  // Hàm cập nhật trạng thái nút
+  function updateButtons() {
+    if (leftBtn) {
+      leftBtn.classList.toggle("hidden", currentPage === 0);
     }
+    if (rightBtn) {
+      rightBtn.classList.toggle("hidden", currentPage === totalPages - 1);
+    }
+  }
+
+  // Hàm chuyển trang
+  function goToPage(n) {
+    if (n < 0 || n >= totalPages) return;
+    currentPage = n;
+
+    const containerWidth = container.offsetWidth;
+    track.style.transform = `translateX(-${currentPage * containerWidth}px)`;
+
+    updateButtons();
+  }
+
+  // Sự kiện nút
+  if (leftBtn) leftBtn.onclick = () => goToPage(currentPage - 1);
+  if (rightBtn) rightBtn.onclick = () => goToPage(currentPage + 1);
+
+  // Khởi tạo trạng thái ban đầu
+  updateButtons();
+
+  // Cập nhật lại khi resize (để tính lại width chính xác)
+  window.addEventListener("resize", () => {
+    const containerWidth = container.offsetWidth;
+    track.style.transform = `translateX(-${currentPage * containerWidth}px)`;
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const boxes = document.querySelectorAll(".content_box");
+// Khởi tạo cho card 1 (hiện tại chỉ card 1 có nhiều trang)
+initSlider(document.querySelector(".desc_card_1"));
+initSlider(document.querySelector(".desc_card_2"));
+initSlider(document.querySelector(".desc_card_3"));
+initSlider(document.querySelector(".desc_card_4"));
+initSlider(document.querySelector(".desc_card_5"));
 
-  boxes.forEach((box) => {
-    const button = box.querySelector("button");
-    const content = box.querySelector(".content");
+// Nếu sau này card 2, 3, 4 có nội dung slide, chỉ cần thêm:
+// initSlider(document.querySelector(".desc_card_2"));
+// initSlider(document.querySelector(".desc_card_3"));
+// ...
 
-    button.addEventListener("click", (e) => {
-      e.preventDefault(); // Ngăn hành vi mặc định nếu cần
+// Video navigator (giữ nguyên phần cũ của bạn)
+document.querySelectorAll(".vid_nav_item").forEach((nav) => {
+  nav.addEventListener("click", () => {
+    document.querySelectorAll(".vid_nav_item").forEach((n) => n.classList.remove("active_nav"));
+    nav.classList.add("active_nav");
 
-      const isOpen = content.classList.contains("active"); // Kiểm tra trạng thái hiện tại
-
-      // Đóng tất cả các content (bao gồm cái đang mở)
-      boxes.forEach((b) => b.querySelector(".content").classList.remove("active"));
-
-      // Nếu cái này chưa mở (isOpen = false), thì mở nó
-      if (!isOpen) {
-        content.classList.add("active");
-      }
-      // Nếu đã mở, thì không làm gì (đã đóng ở trên)
-    });
+    const target = nav.dataset.target;
+    document.querySelectorAll(".video").forEach((v) => v.classList.remove("active_vid"));
+    document.querySelector(`.${target}`).classList.add("active_vid");
   });
 });

@@ -50,16 +50,8 @@
 .explain_text {
   width: 40%;
 }
-.explain_text h4 {
-  font-size: 20px;
-  font-weight: 600;
-}
 
 .explain_text span {
-  font-size: 18px;
-  display: inline-block;
-  text-align: justify;
-  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -118,8 +110,6 @@
   font-size: 30px;
   margin-bottom: 5vh;
   color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .solution_desc_content {
@@ -180,8 +170,6 @@
 }
 
 .solution_benefit p {
-  font-size: 15px;
-  line-height: 1.5;
   color: #e0e0e0;
   max-width: 300px;
 }

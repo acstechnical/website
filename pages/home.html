@@ -14,15 +14,15 @@
   </head>
   <body>
     <div id="header"></div>
-    <section class="video-container">
-      <video autoplay muted loop preload="auto">
-        <source
-          src="../assets/static/home/home_background.mp4"
-          type="video/mp4"
-        />
-        Trình duyệt của bạn không hỗ trợ video.
-      </video>
-    </section>
+    <div class="overview">
+      <section class="video-container">
+        <video autoplay muted loop preload="auto">
+          <source src="../assets/static/home/home_background.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ video.
+        </video>
+      </section>
+    </div>
+
     <div class="introduce_container">
       <div class="introduce">
         <h1 data-translate="what_we_do">WHAT WE DO ?</h1>
@@ -32,11 +32,16 @@
         </p>
       </div>
     </div>
+
     <div class="main_content">
       <div class="navbox_container">
         <div class="content_holder">
-          <h1 data-translate="our_solutions">OUR SOLUTIONS</h1>
+          <h2 data-translate="our_solutions">OUR SOLUTIONS</h2>
           <div class="content_box_container">
+            <a href="hpc_solutions.html" class="content_box">
+              <img src="..\assets\static\hpc\hpc_overview.png" alt="AntiDDoS" />
+              <span>HPC Solutions</span>
+            </a>
             <a href="antiddos.html" class="content_box">
               <img src="..\assets\static\home\antiddos.png" alt="AntiDDoS" />
               <span>AntiDDoS</span>
@@ -52,7 +57,7 @@
           </div>
         </div>
         <div class="content_holder">
-          <h1 data-translate="our_products">OUR PRODUCTS</h1>
+          <h2 data-translate="our_products">OUR PRODUCTS</h2>
           <div class="content_box_container">
             <a href="hpc.html" class="content_box">
               <img
