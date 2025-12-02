@@ -22,6 +22,14 @@
   margin: 1vh 0;
 }
 
+.overview-desc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40vw;
+
+}
+
 .select_tech_hpc {
   width: 100%;
   background-color: #000000;
