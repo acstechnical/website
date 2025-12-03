@@ -254,5 +254,18 @@
   "massive_data_4": "- Use GPUs or multiple parallel FPGAs for processing",
   "limited_data_1": "- Limited data volume",
   "limited_data_2": "- Standard SCADA formats: easier to detect",
-  "limited_data_3": "- Real-time requirements – use FPGA for processing"
+  "limited_data_3": "- Real-time requirements – use FPGA for processing",
+  "architect_desc_card_text_p": "Dependent on the manufacturer's Host",
+  "architect_desc_card_text_p1": "Limited number of FPGA Cards, depending on the manufacturer",
+  "architect_desc_card_text_p2": "Dependent on the manufacturer's Host control program",
+  "architect_desc_card_text_p3": "In-house designed and developed Gigabit Switch",
+  "architect_desc_card_text_p4": "In-house designed and developed FPGA Cards",
+  "architect_desc_card_text_p5": "Highly scalable – supports stacking (Switch: 8 ports, supports 2-layer stacking, each layer holds 8 FPGA cards)",
+  "architect_desc_card_text_p6": "=> 100% technology mastery",
+  "our_hpc_platform_h3": "HPC platform built on a proprietary Gigabit Switch Cluster architecture developed in-house",
+  "our_hpc_platform_text_h4": "The company's HPC solution is developed on SoC-FPGA technology, enabling flexible deployment for various specific requirements and professional tasks, including:",
+  "our_hpc_platform_text_p": "- Penetration Testing System",
+  "our_hpc_platform_text_p1": "- Cryptanalysis System",
+  "our_hpc_platform_text_p3": "- Malware Analysis and Detection System",
+  "our_hpc_platform_text_p2": "- Information Security Risk Analysis and Prediction System, (5) Big Data Processing"
 }
