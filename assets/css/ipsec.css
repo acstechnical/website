@@ -204,8 +204,7 @@
 .explain_title {
   width: 50%;
   font-size: 2.5rem;
-  font-weight: 10000;
-  color: rgb(174, 88, 255);
+  font-weight: 800;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -224,15 +223,14 @@
 }
 
 .explain_title h4 {
-  font-size: 1.2rem;
-  font-weight: 1000;
+  font-size: 1.3rem;
   color: rgb(0, 0, 0);
+  font-weight: 400;
 }
 
 .explain_title h4 strong {
-  font-size: 1.2rem;
-  font-weight: 1000;
-  color: rgb(150, 0, 133);
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .explain_title_text {
@@ -246,8 +244,7 @@
 }
 
 .explain_title_text h4 {
-  font-size: 1.2rem;
-  font-weight: 1000;
+  font-size: 1.4rem;
   color: white;
 }
 
@@ -380,15 +377,12 @@
 
 .solution_content2 h4 {
   color: black;
-  font-size: 1.5rem;
-  font-weight: 1000;
+  font-size: 1.6rem;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: 0 0 15px rgb(24, 0, 79);
   user-select: none;
   width: 100%;
-  height: fit-content;
-  padding: 1vh 0;
+  padding: 10px 0;
 }
 
 .solution_title.bisque {

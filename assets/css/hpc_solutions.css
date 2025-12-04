@@ -52,8 +52,7 @@ p > strong + span {
 }
 .select_tech_hpc {
   width: 100%;
-  background-color: #000000;
-  color: #ffffff;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -62,7 +61,7 @@ p > strong + span {
 
 .select_tech_hpc h2 {
   text-align: center;
-  color: #ffffff;
+  color: #000000;
 }
 
 .select_tech_hpc h3 {
