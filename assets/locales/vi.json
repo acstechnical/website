@@ -47,7 +47,7 @@
   "explain_IPSec_strong1": "Chế độ vận chuyển",
   "explain_IPSec_strong2": "Chế độ đường hầm",
   "hpc_title": "Hệ thống tính toán hiệu suất cao",
-  "hpc_title1": "GIải pháp tính toán hiệu suất cao",
+  "hpc_title1": "Giải pháp tính toán hiệu suất cao",
   "hpc_definition_bold": "Tính Toán Hiệu Suất Cao (HPC)",
   "hpc_definition_span": "là việc sử dụng các hệ thống tính toán hiệu năng cao kết hợp với kỹ thuật xử lý song song nhằm giải quyết những bài toán phức tạp và xử lý khối lượng dữ liệu khổng lồ với tốc độ vượt trội.",
   "hpc_systems_desc": "Các hệ thống HPC được cấu thành từ nhiều nút tính toán liên kết với nhau, hoạt động đồng thời để tạo ra năng lực xử lý mạnh hơn rất nhiều so với các hệ thống truyền thống. Nhờ kiến trúc này, HPC được ứng dụng rộng rãi trong các lĩnh vực như",
@@ -201,7 +201,7 @@
   "result_test2": "Thử nghiệm Băng thông với IPSec bằng Phần cứng Acronics",
   "result_test3": "So sánh Hiệu suất IPSec giữa Phần mềm và Phần cứng",
   "overview_firewall_title": "Cấu trúc Next generation SCADA Firewall",
-  "hero_title": "Mật mã học",
+  "hero_title": "Bảo mật thông tin và an toàn mạng",
   "module_box.control_plane": "Bộ xử lý mặt phẳng điều khiển",
   "module_box.network_processor": "Bộ xử lý mạng",
   "module_box.multi_core_security": "Bộ xử lý bảo mật đa lõi",
@@ -269,5 +269,5 @@
   "our_hpc_platform_text_p": "- Hệ thống Pentest",
   "our_hpc_platform_text_p1": "- Hệ thống thám mã",
   "our_hpc_platform_text_p3": "- Hệ thống phân tích và nhận diện mã độc",
-  "our_hpc_platform_text_p2": "- Hệ thống phân tích và dự báo nguy cơ mất an toàn thông tin, (5) xử lý dữ liệu lớn"
+  "our_hpc_platform_text_p2": "- Hệ thống phân tích và dự báo nguy cơ mất an toàn thông tin, xử lý dữ liệu lớn"
 }

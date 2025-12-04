@@ -14,15 +14,23 @@
   gap: 20px;
   text-align: left;
 }
-
 .introduce h1 {
   flex: 2;
+  color: #141414;
 }
 
 .introduce p {
   flex: 3;
 }
-
+p > strong,
+p > span {
+  display: inline !important;
+  margin: 0;
+  padding: 0;
+}
+p > strong + span {
+  margin-left: 0 !important;
+}
 .main_content {
   background-color: rgb(17, 0, 63);
   display: flex;
