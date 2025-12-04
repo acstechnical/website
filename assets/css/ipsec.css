@@ -22,22 +22,6 @@
   object-fit: cover;
 }
 
-/* OVERVIEW TEXT */
-.overview-text {
-  font-weight: 900;
-  font-size: 60px;
-  color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  width: 60vw;
-  text-align: center;
-  filter: drop-shadow(10px 25px 25px rgba(0, 0, 0, 1));
-  text-shadow: 0 0 15px rgba(0, 191, 255, 1);
-}
-
 /* CONTENT SECTION */
 .explain {
   display: flex;
@@ -162,7 +146,6 @@
 .solution_benefit:hover {
   transform: scale(1.05);
   background-color: rgba(0, 0, 0, 1);
-  box-shadow: 0 10px 30px rgb(117, 101, 255);
 }
 
 .solution_benefit img {
@@ -287,7 +270,7 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  color: blueviolet;
+  color: #000;
   font-size: 3rem;
   padding: 5vh 0 3vh 0;
 }
