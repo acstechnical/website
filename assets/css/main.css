@@ -31,11 +31,11 @@
 
 /* OVERVIEW TEXT */
 .overview-text {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 60px;
   color: #ffffff;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;

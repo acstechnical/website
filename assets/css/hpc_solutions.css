@@ -114,7 +114,9 @@ p > strong + span {
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
-
+.transform_up_hover {
+  height: 160px;
+}
 .marked_img:hover {
   transform: translateY(-150px);
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.7);
