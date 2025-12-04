@@ -228,12 +228,11 @@
 
 .explain_title_text h4 {
   font-size: 1.4rem;
-  color: white;
 }
 
 .explain_title_text h3 {
   font-size: 1.7rem;
-  font-weight: 1000;
+  font-weight: 700;
   color: rgb(255, 0, 0);
 }
 
@@ -245,7 +244,7 @@
 .explain.top {
   margin: 15vh auto;
   width: 100vw !important;
-  background-color: rgb(0, 0, 22);
+  background-color: bisque;
   margin: 0;
   padding: 10vh 4vw;
   justify-content: center;

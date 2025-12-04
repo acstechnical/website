@@ -82,8 +82,11 @@ p > strong + span {
   justify-content: center;
   align-items: center;
 }
+.architect_desc_card_text h3 {
+  color: #000;
+}
 .architect_desc_card_text p {
-  color: #cccccc;
+  color: #000;
   font-size: 1.3rem;
 }
 .tech_card_container {
@@ -95,15 +98,18 @@ p > strong + span {
 }
 
 .tech_hpc_card {
-  background-color: #111111;
+  background-color: bisque;
   border-radius: 12px;
   padding: 20px;
   width: 100%;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.tech_hpc_card h3 {
+  color: #000000;
+}
 .tech_hpc_card p {
-  color: #cccccc;
+  color: #000000;
   font-size: 1.3rem;
 }
 /* Ẩn ảnh trong các thẻ có class marked_img */
@@ -144,7 +150,7 @@ p > strong + span {
 
 .architect_desc_card {
   padding: 20px 10px 10px 10px;
-  background-color: #111111;
+  background-color: bisque;
   border-radius: 12px;
   padding: 20px;
   width: 100%;
