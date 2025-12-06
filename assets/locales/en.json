@@ -52,6 +52,19 @@
   "hpc_definition_span": "refers to the use of powerful computing systems and parallel processing techniques to solve complex computational problems and process massive amounts of data at high speed.",
   "hpc_systems_desc": "HPC systems consist of interconnected compute nodes working together to deliver significantly greater performance than traditional systems. This architecture is widely applied in fields such as ",
   "hpc_systems_desc_em": "AI and Machine Learning, scientific simulation, engineering design, quantitative finance, and big data analytics.",
+  "hpc_tech": "HPC Technologies",
+  "hpc_cpu": "CPU Technology",
+  "hpc_cpu_1": "Low performance and dependent on licensing",
+  "hpc_asic": "ASIC Technology",
+  "hpc_asic_1": "GPUs offer higher performance but are still dependent on specific platforms and licensing.",
+  "hpc_fpga": "FPGA Technology",
+  "hpc_fpga_1": "Both technologies rely on closed and pre-packaged drivers, resulting in complete dependency, no customization capability, no upgrade flexibility, and potential risks of backdoors or spyware.",
+  "hpc_fpga_2": "Performance is higher than CPUs but lower than GPUs — offering a balanced solution.",
+  "hpc_fpga_3": "Fully designed, developed, and packaged in-house (domestically).",
+  "hpc_fpga_4": "Owning the technology enables full autonomy in maintenance and upgrades.",
+  "hpc_main": "Main HPC Architecture",
+  "hpc_pcle": "Using Host PCIe Architecture",
+  "hpc_switch": "Using Gigabit Switch Architecture",
   "acronics_hpc_bold": "Acronics Solutions HPC Platform",
   "acronics_hpc_desc": " provides an integrated and scalable environment for managing workloads, monitoring performance, and optimizing costs — enabling organizations to fully leverage computational power for research, innovation, and production.",
   "card1_title": "HPC Predicts Information Security Risks",
@@ -195,23 +208,17 @@
   "module_box.scada_qos": "Module SCADA & QoS",
   "pdf_banner.title": "Want to view the full technical documentation?",
   "pdf_banner.button": "↓ Download PDF now",
-
   "core_architecture_title": "Core Architecture: Control & Management Policies",
-
   "core_feature_1": "Monitoring policies based on User ID and Group ID → ACL",
   "core_feature_2": "Cybersecurity: IPSec/TLS combined with hardware–software co-design to ensure throughput for real-time applications",
   "core_feature_3": "Network protection: Built-in DDoS mitigation at Layer 3/4 and Layer 6/7",
   "core_feature_4": "Detection of viruses/malware embedded (hidden) within network traffic",
   "core_feature_5": "DPI-based traffic analysis for QoS requirements and industrial control protocols (SCADA)",
-
   "operational_dataflow_title": "Operational Data Flow",
-
   "content_id": "Detects and prevents threats such as malware, unauthorized data, files, and web content",
   "user_id": " Controls all group and user information within the network using the Active Directory data repository",
   "app_id": " Accurately identifies applications passing through the network using various techniques such as application signatures, port decryption, protocols, and inspection",
-
   "module_top_title": "Details of some main modules",
-
   "module1_title": "Module 1 - Switch Fabric & Dataplane",
   "module1_structure": "Structure",
   "module1_list_1": "Layer 2/3: forwarding",
@@ -219,7 +226,6 @@
   "module1_list_3": "ARP",
   "module1_list_4": "NAC",
   "module1_list_5": "Router",
-
   "module2_title": "Module 2 – Security: SSL/IPSec Architecture",
   "module2_section1": "SSL/IPSec Architecture for Small and Medium Networks",
   "module2_flow": "Data flows within the system",
@@ -229,7 +235,6 @@
   "module2_large_scale": "Large-scale TLS/SSL hardware architecture model",
   "module2_detail_section": "Details of key modules: Detailed description of the high-speed IPSec traffic security module",
   "module2_multi_core": "Detailed architecture with Multi-Cores and Multi-ARMs",
-
   "module3_title": "Module 3 - IDS/IPS",
   "module3_overview": "Overview of the IDS/IPS Block Diagram",
   "detection": "Detection:",
@@ -249,5 +254,18 @@
   "massive_data_4": "- Use GPUs or multiple parallel FPGAs for processing",
   "limited_data_1": "- Limited data volume",
   "limited_data_2": "- Standard SCADA formats: easier to detect",
-  "limited_data_3": "- Real-time requirements – use FPGA for processing"
+  "limited_data_3": "- Real-time requirements – use FPGA for processing",
+  "architect_desc_card_text_p": "Dependent on the manufacturer's Host",
+  "architect_desc_card_text_p1": "Limited number of FPGA Cards, depending on the manufacturer",
+  "architect_desc_card_text_p2": "Dependent on the manufacturer's Host control program",
+  "architect_desc_card_text_p3": "In-house designed and developed Gigabit Switch",
+  "architect_desc_card_text_p4": "In-house designed and developed FPGA Cards",
+  "architect_desc_card_text_p5": "Highly scalable – supports stacking (Switch: 8 ports, supports 2-layer stacking, each layer holds 8 FPGA cards)",
+  "architect_desc_card_text_p6": "=> 100% technology mastery",
+  "our_hpc_platform_h3": "HPC platform built on a proprietary Gigabit Switch Cluster architecture developed in-house",
+  "our_hpc_platform_text_h4": "The company's HPC solution is developed on SoC-FPGA technology, enabling flexible deployment for various specific requirements and professional tasks, including:",
+  "our_hpc_platform_text_p": "- Penetration Testing System",
+  "our_hpc_platform_text_p1": "- Cryptanalysis System",
+  "our_hpc_platform_text_p3": "- Malware Analysis and Detection System",
+  "our_hpc_platform_text_p2": "- Information Security Risk Analysis and Prediction System, Big Data Processing"
 }

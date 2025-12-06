@@ -296,11 +296,7 @@
   padding: 0px 50px 0px 80px;
 }
 .product_info_img button {
-  background: linear-gradient(
-    135deg,
-    rgba(120, 130, 255, 0.3),
-    rgba(200, 210, 255, 0.1)
-  );
+  background: linear-gradient(135deg, rgba(120, 130, 255, 0.3), rgba(200, 210, 255, 0.1));
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   font-size: 18px;
@@ -319,15 +315,484 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 .product_info_img button:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(150, 160, 255, 0.4),
-    rgba(255, 255, 255, 0.15)
-  );
+  background: linear-gradient(135deg, rgba(150, 160, 255, 0.4), rgba(255, 255, 255, 0.15));
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px) scale(1.02);
 }
 .product_info_img button:active {
   transform: translateY(0);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+:root {
+  --cololore: rgb(0, 0, 0);
+  --window-margin-width: 2vw;
+  --window-margin-height: 2vh;
+  --window-width: 100vw;
+  --window-height: 100vh;
+}
+
+.snap_container {
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.overview_slide {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  /* Thêm background nếu cần để khớp với desc_card */
+  background-color: #000000; /* Ví dụ nền đen */
+}
+
+.desc_card_1,
+.desc_card_2,
+.desc_card_3,
+.desc_card_4,
+.desc_card_5 {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+}
+/* Lớp phủ tối */
+.desc_card_1::before,
+.desc_card_2::before,
+.desc_card_3::before,
+.desc_card_4::before,
+.desc_card_5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* chỉnh mức tối ở đây */
+  pointer-events: none; /* không ảnh hưởng hover */
+  z-index: 1;
+}
+/* Nội dung bên trong nằm trên lớp phủ */
+.desc_card_1 > *,
+.desc_card_2 > *,
+.desc_card_3 > *,
+.desc_card_4 > *,
+.desc_card_5 > * {
+  position: relative;
+  z-index: 2;
+}
+
+.desc_card_1 {
+  background-color: rgb(255, 255, 255);
+}
+.desc_card_2 {
+  background-color: rgb(255, 238, 218);
+}
+.desc_card_3 {
+  background-color: rgb(227, 223, 255);
+}
+.desc_card_4 {
+  background-color: rgb(210, 255, 206);
+}
+.desc_card_5 {
+}
+
+/* --------- Buttons -------- */
+
+.button_box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+  transform: translateY(-50%);
+  z-index: 10; /* nằm trên nội dung */
+  pointer-events: none; /* để click xuyên qua, chỉ 2 nút nhận click */
+}
+
+.left_sliding,
+.right_sliding {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+  pointer-events: all; /* để 2 nút vẫn bấm được */
+}
+
+.left_sliding {
+  transform: translateX(-1vw);
+}
+
+.right_sliding {
+  transform: translateX(1vw);
+}
+
+/* Hover đẹp */
+.left_sliding:hover,
+.right_sliding:hover {
+  transform: scale(1.25);
+}
+
+/* Icon mũi tên (dùng CSS không cần hình) */
+.left_sliding::before,
+.right_sliding::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+
+/* Hướng icon */
+.left_sliding::before {
+  transform: rotate(-135deg);
+}
+.right_sliding::before {
+  transform: rotate(45deg);
+}
+
+/* Ẩn nút khi không cần thiết */
+.left_sliding.hidden,
+.right_sliding.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-1vw) scale(0.8); /* vẫn giữ vị trí để không bị nhảy layout */
+}
+
+.right_sliding.hidden {
+  transform: translateX(1vw) scale(0.8);
+}
+
+/* Hiệu ứng mượt khi hiện/ẩn */
+.left_sliding,
+.right_sliding {
+  opacity: 1;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* --------- Effects --------- */
+
+.zoom_effect {
+  transition: 0.35s ease !important;
+  user-select: none !important;
+}
+
+.zoom_effect:hover {
+  transform: scale(1.06) translateY(-3px) !important;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.zoom_effect_strong {
+  transition: 0.35s ease !important;
+  user-select: none !important;
+}
+
+.zoom_effect_strong:hover {
+  transform: scale(1.3) translateY(-3px) !important;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* --------- Content inside slide pages--------- */
+
+.content_container {
+  height: calc(var(--window-height) - var(--window-margin-height) * 2);
+  width: calc(var(--window-width) - var(--window-margin-width) * 2);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliding_track {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: max-content;
+  transition: transform 0.4s ease;
+}
+
+.sliding_page {
+  height: calc(var(--window-height) - var(--window-margin-height) * 2);
+  width: calc(var(--window-width) - var(--window-margin-width) * 2);
+  flex-shrink: 0;
+}
+
+.single_content_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 5vh 5vw;
+}
+
+.single_content_column img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.end_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.center_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.start_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+}
+
+.single_content_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 5vh 5vw;
+}
+
+.single_content_row:hover .hidden_detail {
+  width: 100%;
+  opacity: 1;
+}
+
+.single_content_row img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.end_row {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.center_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.start_row {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.gray_bkgr {
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+}
+
+.hidden_detail {
+  height: 80%;
+  width: 0;
+  opacity: 0;
+  transition: width 0.5s ease, opacity 0.35s ease;
+  padding: 2rem;
+}
+
+.hidden_detail::-webkit-scrollbar {
+  display: none;
+}
+
+.detail {
+  height: 80%;
+  width: 100%;
+  opacity: 1;
+  transition: width 0.5s ease, opacity 0.35s ease;
+  padding: 2rem;
+}
+
+.spacing_title h3 {
+  margin-bottom: 5vh !important;
+}
+
+.border_radius_default_img {
+  border-radius: 15px;
+}
+
+.image_with_desc {
+  gap: 2vh;
+}
+
+.gap_standard {
+  gap: 5vw;
+}
+
+.border_shadow {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin: 1vh 1vw;
+}
+
+.no_padding {
+  padding: 1vh 1vw !important;
+}
+
+.no_scale {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.scrollable {
+  overflow-x: none;
+  overflow-y: scroll;
+}
+
+.video_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vw;
+  color: rgb(0, 0, 0);
+}
+
+.video {
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+
+  transition: opacity 0.45s ease, transform 0.45s ease, height 0.5s ease;
+}
+
+.video iframe {
+  height: 90%;
+  width: 90%;
+  border-radius: 15px;
+}
+
+.active_vid {
+  opacity: 1;
+  height: 100%;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* ---------------- VIDEO NAVIGATOR ---------------- */
+
+.video_navigator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.vid_nav_item {
+  width: 45px;
+  height: 6px;
+  border-radius: 10px;
+  background: rgba(248, 72, 72, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.vid_nav_item:hover {
+  transform: scale(1.2);
+  background: rgba(255, 0, 0, 0.7);
+}
+
+.active_nav {
+  background: rgb(255, 0, 0);
+  width: 65px;
+  height: 7px;
+}
+
+/* -------- BUTTONS ------------ */
+
+.button_normal {
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+  background: linear-gradient(to right, rgb(17, 1, 69), rgb(0, 21, 255));
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  /* làm mượt */
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button_normal:hover {
+  background: linear-gradient(to right, rgb(0, 65, 255), rgb(102, 0, 255));
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------- */
+
+.card_1_page_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  padding: 10vh 2vw 2vh 2vw;
+  overflow: hidden;
+  color: #000000;
+}
+
+.card_1_page_2 {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  padding: 10vh 2vw 2vh 2vw;
+  overflow: hidden;
+}
+
+.card_1_page_3 {
+  display: flex;
+  flex-direction: row;
+  color: #000000;
+  padding: 10vh 2vw 2vh 2vw;
+  overflow: hidden;
 }
